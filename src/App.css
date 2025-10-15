@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a3a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4285f4;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3367d6;
+}
+
+/* Smooth animations */
+* {
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+/* Responsive text scaling */
+@media (max-width: 768px) {
+  .text-9xl {
+    font-size: 4rem;
+  }
+}
