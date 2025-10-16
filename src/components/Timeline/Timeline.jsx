@@ -150,7 +150,7 @@ export default function Timeline() {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto py-20 px-5 relative overflow-hidden bg-slate-950 min-h-screen" ref={timelineRef} style={{ fontFamily: FONTS.body }}>
+    <div className="w-full˳ mx-auto py-20 px-5 relative overflow-hidden bg-slate-950 min-h-screen" ref={timelineRef} style={{ fontFamily: FONTS.body }}>
       <div className="text-center mb-16 relative">
         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide" style={{ fontFamily: FONTS.title }}>
           Event Timeline
