@@ -86,7 +86,7 @@ const AboutSection = ({
   ];
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-slate-950 overflow-hidden py-16 sm:py-20">
+    <section ref={sectionRef} id='#about' className="relative w-full bg-slate-950 overflow-hidden py-16 sm:py-20">
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Title */}
@@ -94,7 +94,7 @@ const AboutSection = ({
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
         }`}>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-white mb-4" style={{ fontFamily: fonts.title }}>
-            What is <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">DUHacks</span>?
+            What is <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">Inoverse</span>?
           </h2>
         </div>
 
@@ -136,7 +136,7 @@ const AboutSection = ({
               >
                 <img 
                   src={image} 
-                  alt={`DUHacks Event ${index + 1}`} 
+                  alt={`Inoverse Event ${index + 1}`} 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -152,14 +152,14 @@ const AboutSection = ({
                 <p className="text-xs sm:text-sm lg:text-base text-white/95 leading-relaxed text-center" style={{ fontFamily: fonts.body }}>
                   Getting into a loop of ideas, but finding out where to showcase them? It's time to think big and act fast! 💡 Start building projects and join us at{' '}
                   <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500" style={{ fontFamily: fonts.title }}>
-                    DUHacks 4.0!
+                    Inoverse 4.0!
                   </span>{' '}
                   🛠️
                 </p>
 
                 {/* Event Info */}
                 <p className="text-xs sm:text-sm lg:text-base text-white/90 leading-relaxed text-center" style={{ fontFamily: fonts.body }}>
-                  DUHacks 4.0 is a 36-hour national-level hackathon organized by the Google Developer Student Club, DDU 🧡
+                  Inoverse 4.0 is a 36-hour national-level hackathon organized by the Google Developer Student Club, DDU 🧡
                 </p>
 
                 {/* Description */}

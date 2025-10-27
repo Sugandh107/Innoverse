@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { HashLink } from 'react-router-hash-link';
+
 
 const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact'], fonts = { title: 'Arial Black', body: 'Arial' } }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -35,7 +35,7 @@ const HeroSection = ({ fonts, bgColor }) => {
 
   useEffect(() => {
     setIsVisible(true);
-    const targetDate = new Date("2025-10-22T10:00:00").getTime();
+    const targetDate = new Date("2025-11-01T10:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();

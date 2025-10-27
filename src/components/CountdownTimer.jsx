@@ -9,7 +9,9 @@ const CountdownTimer = () => {
   })
 
   useEffect(() => {
-    const targetDate = new Date('2025-02-22T00:00:00').getTime()
+    const targetDate = new Date('2025-11-22T10:00:00').getTime()
+    console.log("HEllo")
+    console.log(new Date(targetDate))
 
     const timer = setInterval(() => {
       const now = new Date().getTime()

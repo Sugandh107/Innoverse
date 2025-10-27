@@ -3,10 +3,14 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/HeroSection';
+import { HashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Pacmananimation from './components/Pacmananimation';
 import Timeline from './components/Timeline/Timeline';
 import AboutSection from './components/AboutSection';
 import FAQSection from './components/FAQSection';
+import CountdownTimer from './components/CountdownTimer';
+import HeroSection from './components/HeroSection';
 // import Testimonial from './components/Testimonials';
 
 // ============ GLOBAL CONFIGURATION ============
@@ -35,6 +39,12 @@ function App() {
   }, []);
 
   return (
+    // <Router>  
+    //   <Routes>
+    //       <Route path="/" element={<Hero fonts={FONTS} bgColor={BG_COLOR} />} />
+    //     <Route path="/about" element={<AboutSection />} />
+    //   </Routes>
+    // </Router>
     <div className="">
       <Navbar navItems={NAV_ITEMS} fonts={FONTS} />
       <main>
@@ -61,8 +71,10 @@ function App() {
         {/* =============================================================== */}
           <Timeline />
           {/* <Testimonial/> */}
-          <AboutSection fonts={FONTS} />
+          <section id='about'>
+          <AboutSection fonts={FONTS} /></section>
           <FAQSection fonts={FONTS} />
+          {/* <CountdownTimer/> */}
       </main>
     </div>
   );
