@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@tailwind utilities;
+
 
 @keyframes blink {
   0%, 50% {
@@ -11,4 +13,22 @@
 
 html{
   scroll-behavior: smooth;
+}
+
+/* Addred Gradient Effect For FAQs */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 5s ease infinite;
 }
