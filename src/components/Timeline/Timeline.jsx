@@ -16,35 +16,35 @@ export default function Timeline() {
 
   const timelineEvents = [
     {
-      icon: "🏠",
+     
       title: "Start Registrations",
       date: "1st June 2022",
       description: "",
       side: "left",
     },
     {
-      icon: "⭐",
+     
       title: "End Registrations",
       date: "14th Jul 2022",
       description: "",
       side: "right",
     },
     {
-      icon: "🚀",
+     
       title: "Opening Ceremony",
       date: "16th July 2022",
       description: "Hackathon opening ceremony will start 9:15 AM onwards.",
       side: "left",
     },
     {
-      icon: "🌐",
+     
       title: "Hackathon Starts",
       date: "16th July 2022",
       description: "Hackathon coding period will start from 10:30 AM onwards.",
       side: "right",
     },
     {
-      icon: "💻",
+      
       title: "Session from GeeksforGeeks",
       date: "16th July 2022",
       description:
@@ -52,14 +52,14 @@ export default function Timeline() {
       side: "left",
     },
     {
-      icon: "⚡",
+      
       title: "Session from Postman",
       date: "16th July 2022",
       description: "Session on APIs 101 using Postman on 4:00 PM Onwards.",
       side: "right",
     },
     {
-      icon: "🤖",
+      
       title: "Session from Alan AI",
       date: "16th July 2022",
       description:
@@ -67,7 +67,7 @@ export default function Timeline() {
       side: "left",
     },
     {
-      icon: "🏁",
+     
       title: "Hackathon Ends",
       date: "17th July 2022",
       description: "Hackathon coding period will end on 10:30 PM.",
@@ -198,12 +198,12 @@ export default function Timeline() {
             <div className={`flex items-center w-5/12 relative ${
               event.side === "left" ? "justify-start" : "justify-end"
             } max-md:w-full max-md:ml-16 max-md:items-start`}>
-              <div className={`absolute w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white text-2xl shadow-lg border-4 border-white z-10 top-1/2 transform -translate-y-1/2 ${
+              {/* <div className={`absolute w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-700 rounded-full flex items-center justify-center text-white text-2xl shadow-lg border-4 border-white z-10 top-1/2 transform -translate-y-1/2 ${
                 event.side === "left" ? "-right-7" : "-left-7"
               } max-md:left-0 max-md:-translate-x-16 max-md:w-11 max-md:h-11 max-md:text-lg max-md:border-2`}>
                 {event.icon}
-              </div>
-              <div className={`bg-gray-900 p-7 rounded-2xl shadow-lg border border-gray-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+              </div> */}
+              <div className={`bg-gray-900/25 p-7 rounded-2xl shadow-lg border border-gray-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
                 event.side === "left" ? "mr-7" : "ml-7"
               } max-md:ml-5 max-md:w-full max-md:p-5`}>
                 <div className="flex justify-between items-start mb-3 flex-wrap gap-2 max-md:flex-col max-md:items-start">
