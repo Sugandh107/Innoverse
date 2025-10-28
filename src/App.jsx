@@ -74,7 +74,7 @@ function App() {
         {/* =============================================================== */}
          
         <Domains/>
-          <Timeline />
+        
           {/* <Testimonial/> */}
           <section id='about'>
           <AboutSection fonts={FONTS} /></section>
