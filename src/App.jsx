@@ -11,6 +11,8 @@ import AboutSection from './components/AboutSection';
 import FAQSection from './components/FAQSection';
 import CountdownTimer from './components/CountdownTimer';
 import HeroSection from './components/HeroSection';
+import Domains from "./components/Domains/Domains.jsx";
+
 // import Testimonial from './components/Testimonials';
 
 // ============ GLOBAL CONFIGURATION ============
@@ -69,6 +71,7 @@ function App() {
           </h2>
         </div> */}
         {/* =============================================================== */}
+        <Domains/>
           <Timeline />
           {/* <Testimonial/> */}
           <section id='about'>
