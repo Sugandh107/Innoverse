@@ -11,6 +11,9 @@ import AboutSection from './components/AboutSection';
 import FAQSection from './components/FAQSection';
 import CountdownTimer from './components/CountdownTimer';
 import HeroSection from './components/HeroSection';
+import AboutCollege from './components/AboutCollege';
+import Domains from "./components/Domains/Domains.jsx";
+
 // import Testimonial from './components/Testimonials';
 
 // ============ GLOBAL CONFIGURATION ============
@@ -69,10 +72,14 @@ function App() {
           </h2>
         </div> */}
         {/* =============================================================== */}
-          <Timeline />
+         
+        <Domains/>
+        
           {/* <Testimonial/> */}
           <section id='about'>
           <AboutSection fonts={FONTS} /></section>
+          <AboutCollege fonts={FONTS}  />
+           <Timeline />
           <FAQSection fonts={FONTS} />
           {/* <CountdownTimer/> */}
       </main>

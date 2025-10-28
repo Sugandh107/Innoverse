@@ -100,7 +100,7 @@ const AboutSection = ({
 
         {/* Stats Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-12 sm:mb-16">
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <div
               key={stat.label}
               className={`text-center transform transition-all duration-1000 ${
