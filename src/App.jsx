@@ -78,6 +78,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="">
         <Navbar navItems={NAV_ITEMS} fonts={FONTS} />
         <main>
