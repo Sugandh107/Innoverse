@@ -9,6 +9,7 @@ import Pacmananimation from './components/Pacmananimation';
 import Timeline from './components/Timeline/Timeline';
 import AboutSection from './components/AboutSection';
 import FAQSection from './components/FAQSection';
+import DevTeam from './components/DevTeam';
 import CountdownTimer from './components/CountdownTimer';
 import HeroSection from './components/HeroSection';
 // import Testimonial from './components/Testimonials';
@@ -74,6 +75,7 @@ function App() {
           <section id='about'>
           <AboutSection fonts={FONTS} /></section>
           <FAQSection fonts={FONTS} />
+          <DevTeam fonts={FONTS} />
           {/* <CountdownTimer/> */}
       </main>
     </div>

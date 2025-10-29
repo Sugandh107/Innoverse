@@ -32,3 +32,18 @@ html{
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
 }
+
+@keyframes blob {
+  0%, 100% {
+    border-radius: 60% 40% 50% 70% / 50% 60% 40% 60%;
+  }
+  50% {
+    border-radius: 40% 60% 70% 50% / 60% 40% 60% 50%;
+  }
+}
+
+.animate-blob {
+  animation: blob 8s infinite ease-in-out;
+}
+
+
