@@ -69,19 +69,18 @@ function App() {
         </div> */}
         {/* =============================================================== */}
          
-        <Domains/>
-        
+          <Domains/>
           {/* <Testimonial/> */}
           <section id='about'>
           <AboutSection fonts={FONTS} /></section>
           <AboutCollege fonts={FONTS}  />
-           <Timeline fonts={FONTS} />
-           <Rules />
-          <FAQSection fonts={FONTS} />
+          <Timeline fonts={FONTS} />
+          <Rules />
           {/* <CountdownTimer/> */}
-           <Message />
-           <GallerySection />
-           <Footer />
+          <Message />
+          <GallerySection />
+          <FAQSection fonts={FONTS} />
+          <Footer />
       </main>
     </div>
   );
