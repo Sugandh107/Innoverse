@@ -223,7 +223,7 @@ const sections = [
         />
       ))}
 
-      <div className="relative z-10">
+      <div className="relative z-10 mt-10">
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-white">
           <span>Hackathon Rules</span>
           {" "}

@@ -29,6 +29,17 @@ const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact
 
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
+                <Link
+                  to="/"
+                  className="text-white font-bold text-sm xl:text-base tracking-wide hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap"
+                  style={{
+                    animation: `fadeInDown 0.6s ease-out ${navItems.length * 0.0}s both`,
+                    fontFamily: fonts.body
+                  }}
+                >
+                  HOME
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-500"></span>
+                </Link>
                 {navItems.map((item, index) => {
                   const href = `#${item.toLowerCase()}`;
                   
@@ -84,6 +95,17 @@ const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact
           {/* Mobile Menu */}
           {isMenuOpen && (
             <div className="lg:hidden mt-3 bg-slate-900/95 backdrop-blur-xl rounded-3xl p-6 sm:p-8 space-y-4 sm:space-y-5 border border-purple-500/30 shadow-2xl animate-slideDown">
+              <Link
+                to="/"
+                className="block text-white font-bold text-lg sm:text-xl hover:text-cyan-400 transition-all duration-300 hover:translate-x-2"
+                onClick={() => setIsMenuOpen(false)}
+                style={{
+                  animation: `fadeInLeft 0.4s ease-out ${navItems.length * 0.02}s both`,
+                  fontFamily: fonts.body
+                }}
+              >
+                HOME
+              </Link>
               {navItems.map((item, index) => {
                 const href = `#${item.toLowerCase()}`;
                 

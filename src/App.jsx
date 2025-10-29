@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 
 // Eager load components that appear above the fold
 import HeroSection from './components/HeroSection';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
 // Lazy load components below the fold
 const AboutSection = lazy(() => import('./components/AboutSection'));
@@ -16,7 +17,7 @@ const GallerySection = lazy(() => import('./components/GallerySection.jsx'));
 const Rules = lazy(() => import('./components/Rules/Rules.jsx'));
 const TeamSection = lazy(() => import('./components/Team.jsx'));
 const FAQSection = lazy(() => import('./components/FAQSection'));
-const PrizesSection = lazy(() => import('./components/Timeline/PrizesSection.jsx'));
+const PrizesSection = lazy(() => import('./components/PrizeSection.jsx'));
 
 
 const LoadingSpinner = () => (
@@ -53,9 +54,9 @@ const HomePage = ({ fonts, bgColor }) => (
       <section id='prizes'>
         <PrizesSection fonts={fonts} />
       </section>
-      <section id='gallery'>
+      {/* <section id='gallery'>
         <GallerySection />
-      </section>
+      </section> */}
       <section id='team'>
         <TeamSection />
       </section>
