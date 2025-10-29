@@ -1,5 +1,11 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
+const FONTS = {
+  title: '"Fredoka", "Arial Black", sans-serif',
+  body: '"Fredoka", "Segoe UI", sans-serif',
+  numbers: '"Fredoka", Impact, sans-serif'
+};
+
 const GallerySection = () => {
     const originalImages = [
         { id: 1, url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D', alt: 'Man smiling in blue shirt' },
@@ -64,10 +70,10 @@ const GallerySection = () => {
         <section className="w-full mx-auto py-20 px-5 relative overflow-hidden bg-slate-950 min-h-screen">
             <div className="container mx-auto px-4">
                 
-                <h2 className="text-4xl font-extrabold text-center text-white mb-2 uppercase tracking-wider">
-                    gallery
+                <h2 className="text-4xl md:text-5xl font-bold text-center text-white tracking-wide" style={{ fontFamily: FONTS.title }}>
+                    Gallery
                 </h2>
-                <p className="text-center text-indigo-300 mb-12 font-medium">
+                <p className="text-center text-indigo-300 mb-12 font-medium" style={{ fontFamily: FONTS.body }}>
                     Check Our Highlights
                 </p>
 
@@ -141,6 +147,8 @@ const GallerySection = () => {
                 `}</style>
 
             </div>
+            <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
         </section>
     );
 };
