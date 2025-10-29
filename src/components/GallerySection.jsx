@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const GallerySection = () => {
@@ -73,7 +71,7 @@ const GallerySection = () => {
                     Check Our Highlights
                 </p>
 
-                <div className="relative overflow-hidden w-full lg:w-4/5 mx-auto rounded-xl">
+                <div className="slider relative overflow-hidden w-full lg:w-4/5 mx-auto rounded-xl">
                     <div 
                         className={transitionClass}
                         style={{ 
@@ -136,15 +134,13 @@ const GallerySection = () => {
                 
                 <style jsx="true">{`
                     @media (min-width: 1024px) { /* Corresponds to Tailwind's 'lg' breakpoint */
-                        .relative > div:first-child {
+                        .slider > div:first-child {
                             transform: ${translateValueLg} !important;
                         }
                     }
                 `}</style>
 
             </div>
-            <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
         </section>
     );
 };

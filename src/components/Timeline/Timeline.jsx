@@ -186,12 +186,12 @@ export default function Timeline() {
         </svg>
       </div>
 
-      <div className="relative py-10 min-h-screen">
+      <div className="relative py-10 min-h-screen sm:p-40">
         {timelineEvents.map((event, index) => (
           <div 
             key={index} 
             className={`timeline-item flex items-center mb-16 w-full relative opacity-0 transition-all duration-700 ${
-              event.side === "left" ? "justify-start" : "justify-end"
+              event.side === "left" ? "justify-end" : "justify-start"
             } max-md:justify-start max-md:items-start`}
             style={{ transform: 'translateY(40px)' }}
           >
