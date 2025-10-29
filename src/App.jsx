@@ -14,6 +14,8 @@ import HeroSection from './components/HeroSection';
 import AboutCollege from './components/AboutCollege';
 import Domains from "./components/Domains/Domains.jsx";
 import GallerySection from './components/GallerySection.jsx';
+import Footer from './components/Footer.jsx';
+import Message from './components/Message.jsx';
 
 // import Testimonial from './components/Testimonials';
 
@@ -81,9 +83,11 @@ function App() {
           <AboutSection fonts={FONTS} /></section>
           <AboutCollege fonts={FONTS}  />
            <Timeline />
-           <GallerySection />
           <FAQSection fonts={FONTS} />
           {/* <CountdownTimer/> */}
+           <Message />
+           <GallerySection />
+           <Footer />
       </main>
     </div>
   );
