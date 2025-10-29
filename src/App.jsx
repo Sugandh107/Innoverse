@@ -14,6 +14,7 @@ import HeroSection from './components/HeroSection';
 import AboutCollege from './components/AboutCollege';
 import Domains from "./components/Domains/Domains.jsx";
 import GallerySection from './components/GallerySection.jsx';
+import Rules from "./components/Rules/Rules.jsx";
 
 // import Testimonial from './components/Testimonials';
 
@@ -22,9 +23,9 @@ import GallerySection from './components/GallerySection.jsx';
 // This creates a single source of truth for your app.
 
 const FONTS = {
-  title: '"Fredoka", "Arial Black", sans-serif',
-  body: '"Fredoka", "Segoe UI", sans-serif',
-  numbers: '"Fredoka", Impact, sans-serif'
+  title: '"Gliker-Regular", "Arial Black", sans-serif',
+  body: '"Gliker-Regular", "Segoe UI", sans-serif',
+  numbers: '"Gliker-Regular", Impact, sans-serif'
 };
 
 const NAV_ITEMS = ['ABOUT', 'THEMES', 'TIMELINE', 'SPONSORS', 'PRIZES', 'TEAM', 'FAQ', 'SOCIALS'];
@@ -80,8 +81,9 @@ function App() {
           <section id='about'>
           <AboutSection fonts={FONTS} /></section>
           <AboutCollege fonts={FONTS}  />
-           <Timeline />
+           <Timeline fonts={FONTS} />
            <GallerySection />
+           <Rules />
           <FAQSection fonts={FONTS} />
           {/* <CountdownTimer/> */}
       </main>

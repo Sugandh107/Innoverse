@@ -16,12 +16,12 @@ const FAQSection = ({
     {
       question: "What if this is my first hackathon?",
       answer:
-        "No worries! DUHacks is beginner-friendly. We provide mentorship, workshops, and resources to help first-timers learn and build amazing projects. It's the perfect opportunity to start your hackathon journey!",
+        "No worries! innoverse is beginner-friendly. We provide mentorship, workshops, and resources to help first-timers learn and build amazing projects. It's the perfect opportunity to start your hackathon journey!",
     },
     {
       question: "Do I need to pay a registration fee?",
       answer:
-        "No! DUHacks 4.0 is completely free to participate. We believe in making innovation accessible to everyone.",
+        "Yes,Just 300Rs To participate. We believe in making innovation accessible to everyone.",
     },
     {
       question: "Who can participate offline?",

@@ -35,7 +35,7 @@ const HeroSection = ({ fonts, bgColor }) => {
 
   useEffect(() => {
     setIsVisible(true);
-    const targetDate = new Date("2025-12-11T10:00:00").getTime();
+    const targetDate = new Date("2025-12-01T10:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -87,7 +87,7 @@ const HeroSection = ({ fonts, bgColor }) => {
     "R",
     "S",
     "E",
-    ".",
+    " ",
     "2",
     ".",
     "0",
@@ -156,7 +156,7 @@ const HeroSection = ({ fonts, bgColor }) => {
               : "opacity-0 -translate-y-20"
           }`}
         >
-          <h1 className="text-[4rem] sm:text-[3rem] md:text-[4rem] lg:text-[6rem] font-black text-white leading-none tracking-tight select-none">
+          <h1 className="text-6xl sm:text-[3rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none">
             {titleLetters.map((letter, index) => (
               <span
                 key={index}
@@ -165,7 +165,7 @@ const HeroSection = ({ fonts, bgColor }) => {
                   animation: `bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${
                     index * 0.1
                   }s both`,
-                  fontFamily: fonts.title,
+                  fontFamily: "Crackman",
                   textShadow:
                     "0 0 40px rgba(139, 92, 246, 0.6), 0 0 80px rgba(139, 92, 246, 0.3)",
                 }}
@@ -194,16 +194,16 @@ const HeroSection = ({ fonts, bgColor }) => {
           }`}
         >
           <p
-            className="text-white text-2xl lg:text-3xl md:text-4xl font-bold tracking-wide "
+            className="text-white text-xl lg:text-3xl md:text-4xl font-bold tracking-wide "
             style={{ fontFamily: fonts.body }}
           >
-           on 11th December, 2025
+           on 1st And 2nd December, 2025
           </p>
           <p
-            className="text-white text-2xl lg:text-3xl md:text-4xl mt-5 font-bold tracking-wide "
+            className="text-white text-xl lg:text-3xl md:text-4xl mt-5 font-bold tracking-wide "
             style={{ fontFamily: fonts.body }}
           >
-           Patners With ProDhee
+           Partners With ProDhee
           </p>
         </div>
 
