@@ -32,3 +32,18 @@ html{
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
 }
+@font-face {
+  font-family: "Crackman";
+  src: url("./assets/fonts/crackman/Crackman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gliker-Regular";
+  src: url("./assets/fonts/Gliker-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+html,body{
+  font-family: "Gliker-Regular";
+}
