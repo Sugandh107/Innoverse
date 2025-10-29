@@ -32,16 +32,7 @@ const AboutCollege = ({ fonts }) => {
             style={{ fontFamily: fonts.body }}
           >
             {/* Paragraph 1 */}
-            <p
-              className="text-justify"
-              style={{
-                textAlign: "justify",
-                textJustify: "inter-word",
-                hyphens: "auto",
-                overflowWrap: "break-word",
-                wordBreak: "break-word",
-              }}
-            >
+            <p className="text-center">
               <span className="text-purple-300 font-bold text-2xl">MCA@GIT</span> was
               founded in the year{" "}
               <span className="text-cyan-300 font-semibold">1999</span>. From the last two
@@ -54,16 +45,7 @@ const AboutCollege = ({ fonts }) => {
 
             {/* Paragraph 2 */}
             <div className="overflow-hidden transition-all duration-700 ease-in-out">
-              <p
-                className="text-justify"
-                style={{
-                  textAlign: "justify",
-                  textJustify: "inter-word",
-                  hyphens: "auto",
-                  overflowWrap: "break-word",
-                  wordBreak: "break-word",
-                }}
-              >
+              <p className="text-justify">
                 The speciality of{" "}
                 <span className="text-purple-300 font-semibold">MCA@GIT</span> is its
                 ability to provide state-of-the-art facilities and infrastructure with the
