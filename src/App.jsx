@@ -16,24 +16,17 @@ import Domains from "./components/Domains/Domains.jsx";
 import GallerySection from './components/GallerySection.jsx';
 import Footer from './components/Footer.jsx';
 import Message from './components/Message.jsx';
-
-// import Testimonial from './components/Testimonials';
-
-// ============ GLOBAL CONFIGURATION ============
-// Define shared constants here to pass as props.
-// This creates a single source of truth for your app.
+import Rules from "./components/Rules/Rules.jsx";
 
 const FONTS = {
-  title: '"Fredoka", "Arial Black", sans-serif',
-  body: '"Fredoka", "Segoe UI", sans-serif',
-  numbers: '"Fredoka", Impact, sans-serif'
+  title: '"Gliker-Regular", "Arial Black", sans-serif',
+  body: '"Gliker-Regular", "Segoe UI", sans-serif',
+  numbers: '"Gliker-Regular", Impact, sans-serif'
 };
 
 const NAV_ITEMS = ['ABOUT', 'THEMES', 'TIMELINE', 'SPONSORS', 'PRIZES', 'TEAM', 'FAQ', 'SOCIALS'];
 
 const BG_COLOR = '#0a0e27';
-
-// ===============================================
 
 function App() {
   // Import Google Fonts once in the main App component
@@ -82,7 +75,8 @@ function App() {
           <section id='about'>
           <AboutSection fonts={FONTS} /></section>
           <AboutCollege fonts={FONTS}  />
-           <Timeline />
+           <Timeline fonts={FONTS} />
+           <Rules />
           <FAQSection fonts={FONTS} />
           {/* <CountdownTimer/> */}
            <Message />

@@ -3,7 +3,7 @@
   color: #ffffff;
   text-align: center;
   padding: 6rem 2rem;
-  font-family: "Fredoka", "Poppins", sans-serif;
+  font-family: "Gliker-Regular", "Poppins", sans-serif;
 }
 
 .domains-title {
@@ -44,14 +44,14 @@
 }
 
 .domain-name {
-  font-family: "Fredoka", sans-serif;
+  font-family: "Gliker-Regular", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .domain-desc {
-  font-family: "Poppins", sans-serif;
+  font-family: "Gliker-Regular", sans-serif;
   font-size: 1rem;
   opacity: 0.9;
   line-height: 1.6;
