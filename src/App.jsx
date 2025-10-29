@@ -1,20 +1,21 @@
 // src/App.jsx
 
-import React, { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/HeroSection';
-import { HashLink } from 'react-router-hash-link';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Pacmananimation from './components/Pacmananimation';
-import Timeline from './components/Timeline/Timeline';
-import AboutSection from './components/AboutSection';
-import FAQSection from './components/FAQSection';
-import CountdownTimer from './components/CountdownTimer';
-import HeroSection from './components/HeroSection';
-import AboutCollege from './components/AboutCollege';
+import React, { useEffect } from "react";
+import Navbar from "./components/Navbar";
+import Hero from "./components/HeroSection";
+import { HashLink } from "react-router-hash-link";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Pacmananimation from "./components/Pacmananimation";
+import Timeline from "./components/Timeline/Timeline";
+import AboutSection from "./components/AboutSection";
+import FAQSection from "./components/FAQSection";
+import CountdownTimer from "./components/CountdownTimer";
+import HeroSection from "./components/HeroSection";
+import AboutCollege from "./components/AboutCollege";
 import Domains from "./components/Domains/Domains.jsx";
-import GallerySection from './components/GallerySection.jsx';
+import GallerySection from "./components/GallerySection.jsx";
 import Rules from "./components/Rules/Rules.jsx";
+import PrizesSection from "./components/PrizeSection.jsx";
 
 // import Testimonial from './components/Testimonials';
 
@@ -23,72 +24,83 @@ import Rules from "./components/Rules/Rules.jsx";
 // This creates a single source of truth for your app.
 
 const FONTS = {
-  title: '"Gliker-Regular", "Arial Black", sans-serif',
-  body: '"Gliker-Regular", "Segoe UI", sans-serif',
-  numbers: '"Gliker-Regular", Impact, sans-serif'
+	title: '"Gliker-Regular", "Arial Black", sans-serif',
+	body: '"Gliker-Regular", "Segoe UI", sans-serif',
+	numbers: '"Gliker-Regular", Impact, sans-serif',
 };
 
-const NAV_ITEMS = ['ABOUT', 'THEMES', 'TIMELINE', 'SPONSORS', 'PRIZES', 'TEAM', 'FAQ', 'SOCIALS'];
+const NAV_ITEMS = [
+	"ABOUT",
+	"THEMES",
+	"TIMELINE",
+	"SPONSORS",
+	"PRIZES",
+	"TEAM",
+	"FAQ",
+	"SOCIALS",
+];
 
-const BG_COLOR = '#0a0e27';
+const BG_COLOR = "#0a0e27";
 
 // ===============================================
 
 function App() {
-  // Import Google Fonts once in the main App component
-  useEffect(() => {
-    const link = document.createElement('link');
-    link.href = 'https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@400;600;700&display=swap';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
-  }, []);
+	// Import Google Fonts once in the main App component
+	useEffect(() => {
+		const link = document.createElement("link");
+		link.href =
+			"https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Poppins:wght@400;600;700&display=swap";
+		link.rel = "stylesheet";
+		document.head.appendChild(link);
+	}, []);
 
-  return (
-    // <Router>  
-    //   <Routes>
-    //       <Route path="/" element={<Hero fonts={FONTS} bgColor={BG_COLOR} />} />
-    //     <Route path="/about" element={<AboutSection />} />
-    //   </Routes>
-    // </Router>
-    <div className="">
-      <Navbar navItems={NAV_ITEMS} fonts={FONTS} />
-      <main>
-        <Hero fonts={FONTS} bgColor={BG_COLOR} />
-          {/* <video src="./pacmangif.mp4" 
+	return (
+		// <Router>
+		//   <Routes>
+		//       <Route path="/" element={<Hero fonts={FONTS} bgColor={BG_COLOR} />} />
+		//     <Route path="/about" element={<AboutSection />} />
+		//   </Routes>
+		// </Router>
+		<div className=''>
+			<Navbar navItems={NAV_ITEMS} fonts={FONTS} />
+			<main>
+				<Hero fonts={FONTS} bgColor={BG_COLOR} />
+				{/* <video src="./pacmangif.mp4" 
           autoPlay
           loop
           muted
            alt="" className='w-full ' /> */}
 
-
-        {/* === Placeholder content to demonstrate sticky navbar on scroll === */}
-        {/* <div className="h-screen bg-slate-800 flex items-center justify-center">
+				{/* === Placeholder content to demonstrate sticky navbar on scroll === */}
+				{/* <div className="h-screen bg-slate-800 flex items-center justify-center">
           <h2 className="text-5xl text-white font-bold" style={{ fontFamily: FONTS.title }}>
             Scroll down to see more...
           </h2>
         </div> */}
-        {/* <Pacmananimation/>
+				{/* <Pacmananimation/>
         <div className="h-screen bg-slate-900 flex items-center justify-center">
           <h2 className="text-5xl text-white font-bold" style={{ fontFamily: FONTS.title }}>
             The navbar remains at the top.
           </h2>
         </div> */}
-        {/* =============================================================== */}
-         
-        <Domains/>
-        
-          {/* <Testimonial/> */}
-          <section id='about'>
-          <AboutSection fonts={FONTS} /></section>
-          <AboutCollege fonts={FONTS}  />
-           <Timeline fonts={FONTS} />
-           <GallerySection />
-           <Rules />
-          <FAQSection fonts={FONTS} />
-          {/* <CountdownTimer/> */}
-      </main>
-    </div>
-  );
+				{/* =============================================================== */}
+
+				<Domains />
+
+				{/* <Testimonial/> */}
+				<section id='about'>
+					<AboutSection fonts={FONTS} />
+				</section>
+				<AboutCollege fonts={FONTS} />
+				<Timeline fonts={FONTS} />
+				<GallerySection />
+				<Rules />
+				<PrizesSection fonts={FONTS} />
+				<FAQSection fonts={FONTS} />
+				{/* <CountdownTimer/> */}
+			</main>
+		</div>
+	);
 }
 
 export default App;
