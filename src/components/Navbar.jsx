@@ -12,19 +12,12 @@ const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-full px-4 lg:px-8 py-3">
             <div className="flex items-center justify-between">
-              {/* Logo */}
-              {/* <div className="flex items-center cursor-pointer group flex-shrink-0">
-                <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-[360deg]">
-                  <div className="absolute inset-0 bg-cyan-500 rounded-xl transform rotate-12 opacity-90 group-hover:rotate-[24deg] transition-all duration-500"></div>
-                  <div className="absolute inset-0 bg-purple-600 rounded-xl transform -rotate-12 opacity-90 group-hover:-rotate-[24deg] transition-all duration-500"></div>
-                  <div className="absolute inset-0 flex flex-col items-center justify-center z-10">
-                    <span className="text-white font-black text-base sm:text-lg lg:text-xl" style={{ fontFamily: fonts.title }}>Ino</span>
-                    <div className="absolute -bottom-0.5 sm:-bottom-1 bg-purple-600 text-white text-[8px] sm:text-[10px] font-bold px-1.5 sm:px-2 py-0.5 rounded-md shadow-lg">
-                      Verse
-                    </div>
-                  </div>
+               
+              <div className="flex items-center cursor-pointer group flex-shrink-0">
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-10 lg:h-10 transform transition-all duration-500">
+                 <img className="" src="./logo.png" alt="" />
                 </div>
-              </div> */}
+              </div>
 
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">

@@ -35,7 +35,7 @@ const HeroSection = ({ fonts, bgColor }) => {
 
   useEffect(() => {
     setIsVisible(true);
-    const targetDate = new Date("2025-11-01T10:00:00").getTime();
+    const targetDate = new Date("2025-12-11T10:00:00").getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -80,6 +80,7 @@ const HeroSection = ({ fonts, bgColor }) => {
   const titleLetters = [
     "I",
     "N",
+    "N",
     "O",
     "V",
     "E",
@@ -87,7 +88,7 @@ const HeroSection = ({ fonts, bgColor }) => {
     "S",
     "E",
     ".",
-    "4",
+    "2",
     ".",
     "0",
   ];
@@ -134,8 +135,20 @@ const HeroSection = ({ fonts, bgColor }) => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-28">
+      <div className="relative z-10 container mx-auto px-6 pt-28 lg:mt-10">
         {/* ... (the rest of the hero content is unchanged) ... */}
+        <div
+          className={`text-center mb-4 transform transition-all duration-1000 delay-300 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+          }`}
+        >
+          <p
+            className="text-white text-lg md:text-xl lg:text-2xl font-semibold tracking-wide mb-2"
+            style={{ fontFamily: fonts.body }}
+          >
+            Gogte Institute of Technology MCA Department presents
+          </p>
+        </div>
         <div
           className={`text-center mb-8 transform transition-all duration-1200 ${
             isVisible
@@ -174,131 +187,84 @@ const HeroSection = ({ fonts, bgColor }) => {
             ))}
           </h1>
         </div>
+        
         <div
-          className={`text-center mb-5 transform transition-all duration-1000 delay-300 ${
+          className={`text-center mb-4  transform transition-all duration-1000 delay-500 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           <p
-            className="text-white text-3xl lg:text-4xl md:text-5xl font-bold tracking-wide animate-pulse-slow"
+            className="text-white text-2xl lg:text-3xl md:text-4xl font-bold tracking-wide "
             style={{ fontFamily: fonts.body }}
           >
-            22-23rd Feb, 2025
+           on 11th December, 2025
+          </p>
+          <p
+            className="text-white text-2xl lg:text-3xl md:text-4xl mt-5 font-bold tracking-wide "
+            style={{ fontFamily: fonts.body }}
+          >
+           Patners With ProDhee
           </p>
         </div>
-        <div
-          className={`flex flex-wrap justify-center items-center gap-2 md:gap-2 mb-16 transform transition-all duration-1000 delay-500 ${
-            isVisible ? "opacity-100 scale-100" : "opacity-0 scale-90"
-          }`}
-        >
-          {["Hustle", "Dream", "Hack"].map((word, index) => (
-            <div key={word} className="text-center group cursor-default">
-              {index === 1 ? (
-                <h2
-                  className="relative text-white text-4xl md:text-4xl font-bold tracking-wider transition-all duration-500 group-hover:scale-110 "
-                  style={{
-                    fontFamily: fonts.title,
-                    textShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
-                    minWidth: "280px",
-                    display: "inline-block",
-                    height: "1.2em",
-                  }}
-                >
-                  <span className="typing-text inline-block">{typedText}</span>
-                  <span
-                    className="cursor inline-block ml-1"
-                    style={{
-                      animation: "blink 1s step-end infinite",
-                      color: "#60a5fa",
-                    }}
-                  >
-                    |
-                  </span>
-                </h2>
-              ) : (
-                <h2
-                  className="text-white text-4xl md:text-4xl font-bold tracking-wider transition-all duration-500 group-hover:scale-110"
-                  style={{
-                    fontFamily: fonts.title,
-                    textShadow: "0 0 20px rgba(99, 102, 241, 0.4)",
-                  }}
-                >
-                  {word}
-                </h2>
-              )}
-            </div>
-          ))}
-        </div>
 
-        <div
-          className={`grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto transform transition-all duration-1000 delay-700 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          {[
-            {
-              value: timeLeft.days,
-              label: "Days",
-              color: "#ef4444",
-              bgColor: "rgba(239, 68, 68, 0.1)",
-            },
-            {
-              value: timeLeft.hours,
-              label: "Hours",
-              color: "#3b82f6",
-              bgColor: "rgba(59, 130, 246, 0.1)",
-            },
-            {
-              value: timeLeft.minutes,
-              label: "Minutes",
-              color: "#f97316",
-              bgColor: "rgba(249, 115, 22, 0.1)",
-            },
-            {
-              value: timeLeft.seconds,
-              label: "Seconds",
-              color: "#10b981",
-              bgColor: "rgba(16, 185, 129, 0.1)",
-            },
-          ].map((item, index) => (
-            <div
-              key={item.label}
-              className="relative group bg-slate-900/60 backdrop-blur-xl rounded-2xl p-5 text-center transform hover:scale-110 transition-all duration-500 border-2 hover:border-opacity-100"
-              style={{
-                animation: `scaleIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${
-                  0.9 + index * 0.1
-                }s both, pulse 2s ease-in-out ${index * 0.2}s infinite`,
-                borderColor: `${item.color}40`,
-                boxShadow: `0 0 20px ${item.color}20`,
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = item.bgColor;
-                e.currentTarget.style.boxShadow = `0 0 40px ${item.color}40`;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(15, 23, 42, 0.6)";
-                e.currentTarget.style.boxShadow = `0 0 20px ${item.color}20`;
-              }}
-            >
-              <div
-                className="text-5xl md:text-6xl font-black mb-2 tabular-nums transition-all duration-300 group-hover:scale-110"
-                style={{
-                  fontFamily: fonts.numbers,
-                  color: item.color,
-                  textShadow: `0 0 15px ${item.color}60`,
-                }}
-              >
-                {formatTime(item.value)}
-              </div>
-              <div
-                className="text-base md:text-lg font-bold tracking-widest uppercase"
-                style={{ fontFamily: fonts.body, color: item.color }}
-              >
-                {item.label}
-              </div>
-            </div>
-          ))}
-        </div>
+         <div
+  className={`grid grid-cols-2 md:grid-cols-4 lg:mt-10 mt-5 gap-4 md:gap-6 w-[300px] md:w-[600px] lg:w-2xl mx-auto transition-all duration-700  ${
+    isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+  }`}
+>
+  {[
+    {
+      value: timeLeft.days,
+      label: "Days",
+      color: "#ef4444",
+      bgColor: "rgba(239, 68, 68, 0.1)",
+    },
+    {
+      value: timeLeft.hours,
+      label: "Hours",
+      color: "#3b82f6",
+      bgColor: "rgba(59, 130, 246, 0.1)",
+    },
+    {
+      value: timeLeft.minutes,
+      label: "Minutes",
+      color: "#f97316",
+      bgColor: "rgba(249, 115, 22, 0.1)",
+    },
+    {
+      value: timeLeft.seconds,
+      label: "Seconds",
+      color: "#10b981",
+      bgColor: "rgba(16, 185, 129, 0.1)",
+    },
+  ].map((item) => (
+    <div
+      key={item.label}
+      className="relative bg-slate-900/25 rounded-xl p-3 text-center border"
+      style={{
+        borderColor: `${item.color}40`,
+        boxShadow: `0 0 10px ${item.color}20`,
+      }}
+    >
+      <div
+        className="text-3xl md:text-4xl font-extrabold mb-1 tabular-nums"
+        style={{
+          fontFamily: fonts.numbers,
+          color: item.color,
+          textShadow: `0 0 10px ${item.color}40`,
+        }}
+      >
+        {formatTime(item.value)}
+      </div>
+      <div
+        className="text-sm md:text-base font-semibold tracking-wider uppercase"
+        style={{ fontFamily: fonts.body, color: item.color }}
+      >
+        {item.label}
+      </div>
+    </div>
+  ))}
+</div>
       </div>
       <style jsx>{`
         /* ... (styles are unchanged and include floatParticle animation) ... */
@@ -368,7 +334,7 @@ const HeroSection = ({ fonts, bgColor }) => {
         .animate-float-slow {
           animation: float 10s ease-in-out 4s infinite;
         }
-        .animate-pulse-slow {
+        . {
           animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
         }
         @keyframes pulse {

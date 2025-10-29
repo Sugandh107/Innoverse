@@ -1,0 +1,58 @@
+.domains-section {
+  background-color: var(--color-slate-950);/* same as main background */
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 2rem;
+  font-family: "Fredoka", "Poppins", sans-serif;
+}
+
+.domains-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.domains-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.domain-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+.domain-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.domain-icon {
+  font-size: 3rem;
+  color: #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.domain-name {
+  font-family: "Fredoka", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.domain-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
