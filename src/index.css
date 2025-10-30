@@ -32,18 +32,18 @@ html{
   background-size: 200% 200%;
   animation: gradientShift 5s ease infinite;
 }
-
-@keyframes blob {
-  0%, 100% {
-    border-radius: 60% 40% 50% 70% / 50% 60% 40% 60%;
-  }
-  50% {
-    border-radius: 40% 60% 70% 50% / 60% 40% 60% 50%;
-  }
+@font-face {
+  font-family: "Crackman";
+  src: url("./assets/fonts/crackman/Crackman.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-.animate-blob {
-  animation: blob 8s infinite ease-in-out;
+@font-face {
+  font-family: "Gliker-Regular";
+  src: url("./assets/fonts/Gliker-Regular.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
 }
-
-
+html,body{
+  font-family: "Gliker-Regular";
+}

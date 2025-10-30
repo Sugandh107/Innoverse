@@ -1,10 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 
-const FONTS = {
-  title: '"Fredoka", "Arial Black", sans-serif',
-  body: '"Fredoka", "Segoe UI", sans-serif',
-  numbers: '"Fredoka", Impact, sans-serif'
-};
 
 export default function Timeline() {
   const [cursorPosition, setCursorPosition] = useState(0);
@@ -150,9 +145,9 @@ export default function Timeline() {
   }, []);
 
   return (
-    <div className="w-full˳ mx-auto py-20 px-5 relative overflow-hidden bg-slate-950 min-h-screen" ref={timelineRef} style={{ fontFamily: FONTS.body }}>
+    <div className="w-full˳ mx-auto py-20 px-5 relative overflow-hidden bg-slate-950 min-h-screen" ref={timelineRef} >
       <div className="text-center mb-16 relative">
-        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide" style={{ fontFamily: FONTS.title }}>
+        <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
           Event Timeline
         </h2>
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-3 w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full"></div>
@@ -186,12 +181,12 @@ export default function Timeline() {
         </svg>
       </div>
 
-      <div className="relative py-10 min-h-screen">
+      <div className="relative py-10 min-h-screen sm:p-40">
         {timelineEvents.map((event, index) => (
           <div 
             key={index} 
             className={`timeline-item flex items-center mb-16 w-full relative opacity-0 transition-all duration-700 ${
-              event.side === "left" ? "justify-start" : "justify-end"
+              event.side === "left" ? "justify-end" : "justify-start"
             } max-md:justify-start max-md:items-start`}
             style={{ transform: 'translateY(40px)' }}
           >
@@ -207,15 +202,15 @@ export default function Timeline() {
                 event.side === "left" ? "mr-7" : "ml-7"
               } max-md:ml-5 max-md:w-full max-md:p-5`}>
                 <div className="flex justify-between items-start mb-3 flex-wrap gap-2 max-md:flex-col max-md:items-start">
-                  <h3 className="text-xl font-semibold text-white md:text-2xl" style={{ fontFamily: FONTS.title }}>
+                  <h3 className="text-xl font-semibold text-white md:text-2xl" >
                     {event.title}
                   </h3>
-                  <span className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap" style={{ fontFamily: FONTS.numbers }}>
+                  <span className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
                     {event.date}
                   </span>
                 </div>
                 {event.description && (
-                  <p className="text-gray-300 leading-relaxed text-sm md:text-base" style={{ fontFamily: FONTS.body }}>
+                  <p className="text-gray-300 leading-relaxed text-sm md:text-base" >
                     {event.description}
                   </p>
                 )}
