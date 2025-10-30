@@ -16,12 +16,32 @@ import Domains from "./components/Domains/Domains.jsx";
 import GallerySection from "./components/GallerySection.jsx";
 import Rules from "./components/Rules/Rules.jsx";
 import PrizesSection from "./components/PrizeSection.jsx";
+import React, { useEffect, lazy, Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
 
-// import Testimonial from './components/Testimonials';
+// Eager load components that appear above the fold
+import HeroSection from './components/HeroSection';
+import ScrollToTop from './components/ScrollToTop.jsx';
 
-// ============ GLOBAL CONFIGURATION ============
-// Define shared constants here to pass as props.
-// This creates a single source of truth for your app.
+// Lazy load components below the fold
+const AboutSection = lazy(() => import('./components/AboutSection'));
+const AboutCollege = lazy(() => import('./components/AboutCollege'));
+const Domains = lazy(() => import('./components/Domains/Domains.jsx'));
+const Timeline = lazy(() => import('./components/Timeline/Timeline'));
+const GallerySection = lazy(() => import('./components/GallerySection.jsx'));
+const Rules = lazy(() => import('./components/Rules/Rules.jsx'));
+const TeamSection = lazy(() => import('./components/Team.jsx'));
+const FAQSection = lazy(() => import('./components/FAQSection'));
+const PrizesSection = lazy(() => import('./components/PrizeSection.jsx'));
+
+
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-slate-950">
+    <div className="text-white text-2xl">Loading...</div>
+  </div>
+);
+
 
 const FONTS = {
 	title: '"Gliker-Regular", "Arial Black", sans-serif',

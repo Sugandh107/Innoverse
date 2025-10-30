@@ -135,7 +135,7 @@ const HeroSection = ({ fonts, bgColor }) => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-28 lg:mt-10">
+      <div className="relative z-10 container mx-auto px-6 pt-28 lg:p-20 lg:mt-10">
         {/* ... (the rest of the hero content is unchanged) ... */}
         <div
           className={`text-center mb-4 transform transition-all duration-1000 delay-300 ${
@@ -143,10 +143,16 @@ const HeroSection = ({ fonts, bgColor }) => {
           }`}
         >
           <p
+            className="text-white text-lg md:text-xl lg:text-4xl font-semibold tracking-wide mb-2"
+            style={{ fontFamily: fonts.body }}
+          >
+            Gogte Institute of Technology  
+          </p>
+          <p
             className="text-white text-lg md:text-xl lg:text-2xl font-semibold tracking-wide mb-2"
             style={{ fontFamily: fonts.body }}
           >
-            Gogte Institute of Technology MCA Department presents
+            MCA Department presents
           </p>
         </div>
         <div
@@ -156,7 +162,7 @@ const HeroSection = ({ fonts, bgColor }) => {
               : "opacity-0 -translate-y-20"
           }`}
         >
-          <h1 className="text-6xl sm:text-[3rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none">
+          <h1 className="text-6xl sm:text-[2rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none">
             {titleLetters.map((letter, index) => (
               <span
                 key={index}
@@ -167,18 +173,18 @@ const HeroSection = ({ fonts, bgColor }) => {
                   }s both`,
                   fontFamily: "Crackman",
                   textShadow:
-                    "0 0 40px rgba(139, 92, 246, 0.6), 0 0 80px rgba(139, 92, 246, 0.3)",
+                    "0 0 40px rgba(139, 92, 246,0.1), 0 0 80px rgba(139, 92, 246, 0.1)",
                 }}
                 onMouseEnter={(e) => {
                   e.target.style.color = "#60a5fa";
                   e.target.style.textShadow =
-                    "0 0 40px rgba(96, 165, 250, 0.8), 0 0 80px rgba(96, 165, 250, 0.4)";
+                    "0 0 40px rgba(96, 165, 250, 0.4), 0 0 80px rgba(96, 165, 250, 0.1)";
                   e.target.style.transform = "scale(1.1) translateY(-10px)";
                 }}
                 onMouseLeave={(e) => {
                   e.target.style.color = "white";
                   e.target.style.textShadow =
-                    "0 0 40px rgba(139, 92, 246, 0.6), 0 0 80px rgba(139, 92, 246, 0.3)";
+                    "0 0 40px rgba(139, 92, 246, 0.4), 0 0 80px rgba(139, 92, 246, 0.1)";
                   e.target.style.transform = "scale(1) translateY(0)";
                 }}
               >
@@ -203,7 +209,7 @@ const HeroSection = ({ fonts, bgColor }) => {
             className="text-white text-xl lg:text-3xl md:text-4xl mt-5 font-bold tracking-wide "
             style={{ fontFamily: fonts.body }}
           >
-           Partners With ProDhee
+           Partners With ProDhee Technologies
           </p>
         </div>
 
