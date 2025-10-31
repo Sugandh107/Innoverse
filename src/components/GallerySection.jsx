@@ -2,15 +2,15 @@ import React, { useState, useEffect, useRef } from 'react';
 
 const GallerySection = () => {
     const originalImages = [
-        { id: 1, url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D', alt: 'Man smiling in blue shirt' },
-        { id: 2, url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D', alt: 'Woman smiling with long hair' },
-        { id: 3, url: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D', alt: 'Woman in white cardigan' },
-        { id: 4, url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8fHw%3D', alt: 'Man smiling in blue shirt' },
-        { id: 5, url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8fHw%3D', alt: 'Woman smiling with long hair' },
-        { id: 6, url: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D', alt: 'Woman in white cardigan' },
+        { id: 1, url: '/gallery1.jpg', alt: 'Man smiling in blue shirt' },
+        { id: 2, url: '/gallery2.jpg', alt: 'Woman smiling with long hair' },
+        { id: 3, url: '/gallery3.jpg', alt: 'Woman in white cardigan' },
+        { id: 4, url: '/gallery4.jpg', alt: 'Man smiling in blue shirt' },
+        { id: 5, url: '/gallery5.jpg', alt: 'Woman smiling with long hair' },
+        { id: 6, url: '/gallery6.jpg', alt: 'Woman in white cardigan' },
+        { id: 7, url: '/gallery7.jpg', alt: 'Woman in white cardigan' },
     ];
     
-    // Triple the images for seamless looping
     const tripleGallery = [...originalImages, ...originalImages, ...originalImages];
     const totalOriginalItems = originalImages.length;
 
@@ -25,16 +25,13 @@ const GallerySection = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    // Handle seamless loop
     useEffect(() => {
-        // When we reach the end of the second set, jump back to the start of the second set
         if (activeIndex >= totalOriginalItems * 2) {
             const timeout = setTimeout(() => {
                 if (containerRef.current) {
                     containerRef.current.style.transition = 'none';
                     setActiveIndex(totalOriginalItems);
                     
-                    // Force reflow
                     containerRef.current.offsetHeight;
                     
                     setTimeout(() => {
@@ -49,28 +46,31 @@ const GallerySection = () => {
         }
     }, [activeIndex, totalOriginalItems]);
 
-    const translateValueLg = `translateX(-${(activeIndex * 20) - 40}%)`;
-    const translateValueSm = `translateX(-${activeIndex * 100}%)`;
+    const translateValueLg = `translateX(-${(activeIndex * 50) - 25}%)`;
+    
+    const translateValueSm = `translateX(-${activeIndex * 100}%)`; 
 
     const getOriginalIndex = (index) => {
         return index % totalOriginalItems;
     };
 
     return (
-        <section className="w-full mx-auto py-20 px-5 relative overflow-hidden bg-slate-950 min-h-screen">
-            <div className="container mx-auto px-4">
+        <section className="w-full mx-auto py-10 px-5 relative overflow-hidden bg-slate-950 min-h-screen">
+            <div className="container mx-auto overflow-hidden"> 
                 
-                <h2 className="text-4xl font-extrabold text-center text-white mb-2 uppercase tracking-wider">
-                    gallery
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center text-white mb-2 uppercase tracking-wider">
+                    A look back
                 </h2>
                 <p className="text-center text-indigo-300 mb-12 font-medium">
-                    Check Our Highlights
+                    Highlights <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500'>from the Last</span> Hackathon
                 </p>
 
-                <div className="slider relative overflow-hidden w-full lg:w-4/5 mx-auto rounded-xl">
+                <div 
+                    className="slider overflow-hidden relative w-full lg:w-4/5 mx-auto rounded-xl py-3 sm:py-10"
+                >
                     <div 
                         ref={containerRef}
-                        className="flex transition-transform duration-500 ease-in-out"
+                        className="flex transition-transform duration-500 ease-in-out -mx-2"
                         style={{ 
                             transform: translateValueSm,
                         }}
@@ -81,22 +81,26 @@ const GallerySection = () => {
                             return (
                                 <div 
                                     key={index}
-                                    className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-2" 
+                                    className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/2 px-2" 
                                     onClick={() => setActiveIndex(index)}
                                 >
                                     <div 
                                         className={`
-                                            relative h-full transition-all duration-300 transform 
+                                            relative w-full aspect-video transition-all duration-300 transform overflow-hidden cursor-pointer
+                                            p-3 rounded-xl bg-slate-900 
                                             ${isHighlighted 
-                                                ? 'scale-110 shadow-lg shadow-indigo-600/50 ring-4 ring-indigo-600 rounded-lg z-10' 
-                                                : 'scale-90 opacity-70 hover:scale-100 hover:opacity-100 shadow-md'
+                                                ? 'scale-110 shadow-md shadow-slate-900/50 z-10 bg-indigo-50 px-10' 
+                                                : 'scale-90 opacity-70 shadow-md'
                                             }
                                         `}
                                     >
                                         <img
                                             src={image.url}
                                             alt={image.alt}
-                                            className="w-full h-80 object-cover rounded-lg cursor-pointer border border-indigo-800"
+                                            className={`
+                                                w-full h-full object-cover rounded-xl
+                                                ${isHighlighted ? '' : 'border border-indigo-800'} 
+                                            `}
                                         />
                                     </div>
                                 </div>
