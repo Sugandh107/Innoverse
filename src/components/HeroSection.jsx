@@ -141,13 +141,17 @@ const HeroSection = ({ fonts, bgColor }) => {
           className={`text-center mb-4 transform transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
-        >
+        > 
+        <div className="flex items-center  justify-center lg:gap-3 gap-[5px] mb-2">
+            <img src="./logo.png" alt="" className="lg:w-16 w-8"/>
           <p
-            className="text-white text-lg md:text-xl lg:text-4xl font-semibold tracking-wide mb-2"
+            className="text-white text-[1.1rem] md:text-xl lg:text-4xl font-semibold tracking-wide mb-2"
             style={{ fontFamily: fonts.body }}
           >
             Gogte Institute of Technology  
           </p>
+          <img src="./3.png" alt="" className="lg:w-16 w-8" />
+          </div>
           <p
             className="text-white text-lg md:text-xl lg:text-2xl font-semibold tracking-wide mb-2"
             style={{ fontFamily: fonts.body }}
@@ -162,7 +166,7 @@ const HeroSection = ({ fonts, bgColor }) => {
               : "opacity-0 -translate-y-20"
           }`}
         >
-          <h1 className="text-6xl sm:text-[2rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none">
+          <h1 className="text-[3.2rem] sm:text-[2rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none">
             {titleLetters.map((letter, index) => (
               <span
                 key={index}
@@ -200,17 +204,28 @@ const HeroSection = ({ fonts, bgColor }) => {
           }`}
         >
           <p
-            className="text-white text-xl lg:text-3xl md:text-4xl font-bold tracking-wide "
+            className="text-white text-xl lg:text-3xl md:text-4xl font-bold tracking-wide mb-3"
             style={{ fontFamily: fonts.body }}
           >
-           on 1st And 2nd December, 2025
+            on 1st And 2nd December, 2025
           </p>
-          <p
-            className="text-white text-xl lg:text-3xl md:text-4xl mt-5 font-bold tracking-wide "
-            style={{ fontFamily: fonts.body }}
-          >
-           Partners With ProDhee Technologies
-          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 lg:gap-3">
+            <p
+              className="text-white text-xl lg:text-3xl md:text-4xl font-bold tracking-wide"
+              style={{ fontFamily: fonts.body }}
+            >
+              Partners With
+            </p>
+            <div className="flex items-center gap-2 lg:gap-3">
+              <img src="./2.png" alt="ProDhee Technologies Logo" className="lg:w-10 w-5 lg:h-10 h-5 object-contain" />
+              <p
+                className="text-white text-xl lg:text-3xl md:text-4xl font-bold tracking-wide whitespace-nowrap"
+                style={{ fontFamily: fonts.body }}
+              >
+                ProDhee Technologies
+              </p>
+            </div>
+          </div>
         </div>
 
          <div

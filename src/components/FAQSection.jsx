@@ -127,22 +127,23 @@ const FAQSection = ({
               <AnimatePresence initial={false}>
                 {openIndex === index && (
                   <motion.div
-                    key="content"
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.35, ease: "easeInOut" }}
-                    className="px-6 pb-6"
-                  >
-                    <div className="border-t border-white/10 pt-4">
-                      <p
-                        className="text-slate-300 text-base leading-relaxed"
-                        style={{ fontFamily: fonts.body }}
-                      >
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </motion.div>
+  key="content"
+  initial={{ opacity: 0, maxHeight: 0 }}
+  animate={{ opacity: 1, maxHeight: "500px" }} // adjust based on content
+  exit={{ opacity: 0, maxHeight: 0 }}
+  transition={{ duration: 0.3, ease: "easeInOut" }}
+  style={{ overflow: "hidden" }}
+  className="px-6 pb-6"
+>
+  <div className="border-t border-white/10 pt-4">
+    <p
+      className="text-slate-300 text-base leading-relaxed"
+      style={{ fontFamily: fonts.body }}
+    >
+      {faq.answer}
+    </p>
+  </div>
+</motion.div>
                 )}
               </AnimatePresence>
             </motion.div>
