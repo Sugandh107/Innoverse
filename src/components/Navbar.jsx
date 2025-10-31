@@ -3,7 +3,7 @@ import { Menu, X } from 'lucide-react';
 import { HashLink } from 'react-router-hash-link';
 import { Link, useLocation } from 'react-router-dom';
 
-const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact'], fonts = { title: 'Arial Black', body: 'Arial' } }) => {
+const Navbar = ({ navItems , fonts }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === '/';
@@ -16,7 +16,7 @@ const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact
             <div className="flex items-center justify-between">
                
               {/* Logo - Always links to home */}
-              <HashLink 
+              {/* <HashLink 
                 smooth 
                 to="/#" 
                 className="flex items-center cursor-pointer group flex-shrink-0"
@@ -25,12 +25,12 @@ const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact
                 <div className="relative w-12 h-12 sm:w-14 sm:h-14 lg:w-10 lg:h-10 transform transition-all duration-500">
                   <img className="" src="./logo.png" alt="Logo" />
                 </div>
-              </HashLink>
+              </HashLink> */}
 
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
-                <Link
-                  to="/"
+                <HashLink
+                  to="/#"
                   className="text-white font-bold text-sm xl:text-base tracking-wide hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap"
                   style={{
                     animation: `fadeInDown 0.6s ease-out ${navItems.length * 0.0}s both`,
@@ -39,7 +39,7 @@ const Navbar = ({ navItems = ['Home', 'About', 'Services', 'Portfolio', 'Contact
                 >
                   HOME
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-500"></span>
-                </Link>
+                </HashLink>
                 {navItems.map((item, index) => {
                   const href = `#${item.toLowerCase()}`;
                   

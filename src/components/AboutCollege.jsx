@@ -20,7 +20,9 @@ const AboutCollege = ({ fonts }) => {
               textShadow: "0 0 20px rgba(139, 92, 246, 0.3)",
             }}
           >
-            MCA DEPARTMENT
+            MCA <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
+              DEPARTMENT
+            </span>
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-purple-500/50 via-blue-500/50 to-cyan-500/50 mx-auto rounded-full"></div>
         </div>

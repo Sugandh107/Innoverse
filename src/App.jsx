@@ -18,6 +18,7 @@ const Rules = lazy(() => import('./components/Rules/Rules.jsx'));
 const TeamSection = lazy(() => import('./components/Team.jsx'));
 const FAQSection = lazy(() => import('./components/FAQSection'));
 const PrizesSection = lazy(() => import('./components/PrizeSection.jsx'));
+const Contact = lazy(() => import('./components/contact/Contact.jsx'));
 
 
 const LoadingSpinner = () => (
@@ -33,7 +34,7 @@ const FONTS = {
   numbers: '"Gliker-Regular", Impact, sans-serif'
 };
 
-const NAV_ITEMS = ['ABOUT', 'DOMAINS', 'TIMELINE', 'PRIZES', 'TEAM', 'FAQ'];
+const NAV_ITEMS = ['ABOUT', 'DOMAINS', 'TIMELINE', 'PRIZES', 'TEAM', 'FAQ', 'CONTACT'];
 const BG_COLOR = '#0a0e27';
 
 // ===============================================
@@ -60,8 +61,14 @@ const HomePage = ({ fonts, bgColor }) => (
       <section id='team'>
         <TeamSection />
       </section>
+      <section id='contact'>
+        <Contact />
+      </section>
       <section id='faq'>
         <FAQSection fonts={fonts} />
+      </section>
+      <section id='contact'>
+        <Contact />
       </section>
     </Suspense>
   </>
