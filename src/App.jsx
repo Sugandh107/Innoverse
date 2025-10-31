@@ -18,7 +18,7 @@ const Rules = lazy(() => import('./components/Rules/Rules.jsx'));
 const TeamSection = lazy(() => import('./components/Team.jsx'));
 const FAQSection = lazy(() => import('./components/FAQSection'));
 const PrizesSection = lazy(() => import('./components/PrizeSection.jsx'));
-const Contact = lazy(() => import('./components/contact/Contact.jsx'));
+const Contact = lazy(() => import('./components/contact/contact.jsx'));
 
 
 const LoadingSpinner = () => (
