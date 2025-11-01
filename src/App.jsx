@@ -55,9 +55,9 @@ const HomePage = ({ fonts, bgColor }) => (
       <section id='prizes'>
         <PrizesSection fonts={fonts} />
       </section>
-      {/* <section id='gallery'>
+      <section id='gallery'>
         <GallerySection />
-      </section> */}
+      </section>
       <section id='team'>
         <TeamSection />
       </section>

@@ -181,6 +181,21 @@ const AboutSection = ({
           </div>
         </div>
       </div>
+      <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 sm:mt-8">
+          <a
+            href="/rules"
+            className="px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full border-2 border-purple-500 text-white bg-transparent hover:bg-purple-600 hover:border-cyan-400 transition-all duration-200 shadow-md hover:scale-105"
+          >
+            Rules
+          </a>
+
+          <a
+            href="#contact"
+            className="px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full bg-purple-600 text-white border-2 border-purple-500 hover:bg-cyan-500 hover:border-cyan-400 transition-all duration-200 shadow-lg hover:scale-105"
+          >
+            Register
+          </a>
+        </div>
 
       {/* Decorations */}
       <div className="absolute top-20 left-10 w-64 sm:w-72 h-64 sm:h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
