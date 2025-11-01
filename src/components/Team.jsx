@@ -26,7 +26,7 @@ const TeamSection = () => {
     },
     {
       name: 'Sriraj Yadav',
-      role: 'Faculty coordinator',
+      role: 'Lead Organizer',
       category: 'Organizer',
       image: '',
       color: '#507a87'
