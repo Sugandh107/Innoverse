@@ -66,6 +66,13 @@ export default function Timeline() {
       title: "Hackathon Ends",
       date: "2nd Dec 2025",
       description: "Hackathon coding period will end on 10:00 AM.",
+      side: "left",
+    },
+    {
+     
+      title: "Coming Soon",
+      date: "",
+      description: "Other details will be announced soon.",
       side: "right",
     },
   ];
@@ -205,9 +212,9 @@ export default function Timeline() {
                   <h3 className="text-xl font-semibold text-white md:text-2xl" >
                     {event.title}
                   </h3>
-                  <span className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
+                  {event.date? <span className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">
                     {event.date}
-                  </span>
+                  </span> : null}
                 </div>
                 {event.description && (
                   <p className="text-gray-300 leading-relaxed text-sm md:text-base" >
