@@ -104,9 +104,9 @@ const AboutSection = ({
           }`}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
-            What is{" "}
+            What is{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
-              Inoverse 2.0
+              INNOVERSE 2.0
             </span>
             ?
           </h2>
