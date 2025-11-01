@@ -75,17 +75,18 @@ const Navbar = ({ navItems , fonts }) => {
               </div>
 
               {/* Desktop Register Button */}
-              <button className="hidden lg:block relative group flex-shrink-0">
+              <a href="https://forms.gle/3DMuKDWsbZR42Jwv7" target='_blank'>
+              <button className="hidden lg:block relative group flex-shrink-0" data-umami-event="register-button-click">
                 <div className="absolute inset-0 bg-purple-600 rounded-full blur-md group-hover:blur-lg opacity-50 group-hover:opacity-75 transition-all duration-300"></div>
                 <div className="relative bg-slate-800 text-white px-6 py-2.5 xl:py-2 rounded-full font-bold text-sm xl:text-base border-2 border-purple-500 group-hover:border-cyan-400 transition-all duration-300 group-hover:scale-105" style={{ fontFamily: fonts.body }}>
                   Register
                 </div>
-              </button>
+              </button></a>
 
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="lg:hidden text-white p-2 hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110 flex-shrink-0"
+                className="lg:hidden text-white p-1 hover:bg-white/10 rounded-lg transition-all duration-300 hover:scale-110 flex-shrink-0"
               >
                 {isMenuOpen ? <X size={24} className="sm:w-7 sm:h-7" /> : <Menu size={24} className="sm:w-7 sm:h-7" />}
               </button>
@@ -138,13 +139,16 @@ const Navbar = ({ navItems , fonts }) => {
               >
                 RULES
               </Link>
-              
-              <button 
-                className="w-full bg-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-lg hover:bg-purple-500 transition-all duration-300 hover:scale-105" 
-                style={{ fontFamily: fonts.body }}
-              >
-                Register
-              </button>
+
+              <a href="https://forms.gle/3DMuKDWsbZR42Jwv7" target='_blank'>
+                <button
+                data-umami-event="register-button-click"
+                  className="w-full bg-purple-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg shadow-lg hover:bg-purple-500 transition-all duration-300 hover:scale-105"
+                  style={{ fontFamily: fonts.body }}
+                >
+                  Register
+                </button>
+              </a>
             </div>
           )}
         </div>

@@ -77,20 +77,9 @@ const HeroSection = ({ fonts, bgColor }) => {
   }, []);
 
   const formatTime = (num) => String(num).padStart(2, "0");
-  const titleLetters = [
-    "I",
-    "N",
-    "N",
-    "O",
-    "V",
-    "E",
-    "R",
-    "S",
-    "E",
-    " ",
-    "2",
-    ".",
-    "0",
+  const titleParts = [
+    { text: "INNOVERSE", letters: ["I", "N", "N", "O", "V", "E", "R", "S", "E"] },
+    { text: "2.0", letters: ["2", ".", "0"] }
   ];
 
   return (
@@ -135,28 +124,37 @@ const HeroSection = ({ fonts, bgColor }) => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 container mx-auto px-6 pt-28 lg:p-20 lg:mt-10">
+      <div className="relative z-10 container mx-auto px-6 pt-20 lg:p-20 lg:mt-1">
         {/* ... (the rest of the hero content is unchanged) ... */}
         <div
           className={`text-center mb-4 transform transition-all duration-1000 delay-300 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         > 
-        <div className="flex items-center  justify-center lg:gap-3 gap-[5px] mb-2">
-            <img src="./logo.png" alt="" className="lg:w-16 w-8"/>
+        <div className="flex flex-wrap items-center justify-center lg:gap-3 gap-2 max-w-4xl mx-auto">
+            <img src="./logo.png" alt="" className="lg:w-16 w-8 flex-shrink-0"/>
+            
           <p
-            className="text-white text-[1.1rem] md:text-xl lg:text-4xl font-semibold tracking-wide mb-2"
+            className="text-white text-[.8rem] md:text-xl lg:text-4xl font-semibold text-center"
             style={{ fontFamily: fonts.body }}
           >
-            Gogte Institute of Technology  
+           KLS Gogte Institute of Technology
           </p>
-          <img src="./3.png" alt="" className="lg:w-16 w-8" />
+          
+         
+          <img src="./3.png" alt="" className="lg:w-16 w-8 flex-shrink-0" />
           </div>
           <p
-            className="text-white text-lg md:text-xl lg:text-2xl font-semibold tracking-wide mb-2"
+            className="text-white text-[.8rem] md:text-xl lg:text-4xl font-semibold tracking-wide mb-2"
             style={{ fontFamily: fonts.body }}
           >
-            MCA Department presents
+           Belagavi
+          </p>
+          <p
+            className="text-white text-[.8rem] md:text-xl lg:text-2xl font-semibold tracking-wide mb-2"
+            style={{ fontFamily: fonts.body }}
+          >
+            Master Of Computer Applications presents
           </p>
         </div>
         <div
@@ -166,33 +164,40 @@ const HeroSection = ({ fonts, bgColor }) => {
               : "opacity-0 -translate-y-20"
           }`}
         >
-          <h1 className="text-[3.2rem] sm:text-[2rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none">
-            {titleLetters.map((letter, index) => (
-              <span
-                key={index}
-                className="inline-block hover:scale-110 transition-all duration-300 cursor-default"
-                style={{
-                  animation: `bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${
-                    index * 0.1
-                  }s both`,
-                  fontFamily: "Crackman",
-                  textShadow:
-                    "0 0 40px rgba(139, 92, 246,0.1), 0 0 80px rgba(139, 92, 246, 0.1)",
-                }}
-                onMouseEnter={(e) => {
-                  e.target.style.color = "#60a5fa";
-                  e.target.style.textShadow =
-                    "0 0 40px rgba(96, 165, 250, 0.4), 0 0 80px rgba(96, 165, 250, 0.1)";
-                  e.target.style.transform = "scale(1.1) translateY(-10px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.target.style.color = "white";
-                  e.target.style.textShadow =
-                    "0 0 40px rgba(139, 92, 246, 0.4), 0 0 80px rgba(139, 92, 246, 0.1)";
-                  e.target.style.transform = "scale(1) translateY(0)";
-                }}
-              >
-                {letter === " " ? "\u00A0\u00A0" : letter}
+          <h1 className="text-[3.2rem] sm:text-[2rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none flex flex-wrap justify-center gap-x-4">
+            {titleParts.map((part, partIndex) => (
+              <span key={partIndex} className="inline-flex whitespace-nowrap">
+                {part.letters.map((letter, letterIndex) => {
+                  const globalIndex = partIndex === 0 ? letterIndex : 9 + letterIndex;
+                  return (
+                    <span
+                      key={letterIndex}
+                      className="inline-block hover:scale-110 transition-all duration-300 cursor-default"
+                      style={{
+                        animation: `bounceIn 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ${
+                          globalIndex * 0.1
+                        }s both`,
+                        fontFamily: "Crackman",
+                        textShadow:
+                          "0 0 40px rgba(139, 92, 246,0.1), 0 0 80px rgba(139, 92, 246, 0.1)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.target.style.color = "#60a5fa";
+                        e.target.style.textShadow =
+                          "0 0 40px rgba(96, 165, 250, 0.4), 0 0 80px rgba(96, 165, 250, 0.1)";
+                        e.target.style.transform = "scale(1.1) translateY(-10px)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.target.style.color = "white";
+                        e.target.style.textShadow =
+                          "0 0 40px rgba(139, 92, 246, 0.4), 0 0 80px rgba(139, 92, 246, 0.1)";
+                        e.target.style.transform = "scale(1) translateY(0)";
+                      }}
+                    >
+                      {letter}
+                    </span>
+                  );
+                })}
               </span>
             ))}
           </h1>
@@ -214,7 +219,7 @@ const HeroSection = ({ fonts, bgColor }) => {
               className="text-white text-xl lg:text-3xl md:text-4xl font-bold tracking-wide"
               style={{ fontFamily: fonts.body }}
             >
-              Partners With
+              Industry Partner
             </p>
             <div className="flex items-center gap-2 lg:gap-3">
               <img src="./2.png" alt="ProDhee Technologies Logo" className="lg:w-10 w-5 lg:h-10 h-5 object-contain" />

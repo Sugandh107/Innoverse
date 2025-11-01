@@ -39,18 +39,23 @@ function Contact() {
     {
       icon: <Mail className="w-8 h-8" />,
       role: "Registration & Queries",
-      description: "For participant registrations, ticket issues, and general questions",
-      email: "registration@innoverse.com",
-      responseTime: "24 hours",
+        description: "For participant registrations, ticket issues, and general questions",
+      contacts: [
+        { name: "Disha Birje", phone: "9019879866" },
+        { name: "Sanchita Devgekar", phone: "7975089175" },
+        { name: "Savitri Koparde", phone: "7760485975" }
+      ],
       color: "from-cyan-500 to-blue-500",
       bgGlow: "bg-cyan-500/10",
     },
     {
       icon: <MessageCircle className="w-8 h-8" />,
-      role: "Faculty",
+      role: "Organizers",
       description: "For Faculty Related inquiries",
-      email: "faculty@innoverse.com",
-      responseTime: "48 hours",
+      contacts: [
+        { name: "Sriraj Yadav", phone: "7760819024" },
+        { name: "Praveen ", phone: "6362237616" }
+      ],
       color: "from-purple-500 to-pink-500",
       bgGlow: "bg-purple-500/10",
     },
@@ -119,22 +124,26 @@ function Contact() {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-500 transition-all duration-300">
                   {contact.role}
                 </h3>
-                <p className="text-sm text-slate-400 mb-4 leading-relaxed">
+                {/* <p className="text-sm text-slate-400 mb-4 leading-relaxed">
                   {contact.description}
-                </p>
+                </p> */}
 
-                {/* Email */}
-                <a
-                  href={`mailto:${contact.email}`}
-                  className={`block text-sm font-semibold bg-gradient-to-r ${contact.color} bg-clip-text text-transparent hover:underline mb-2 break-words`}
-                >
-                  {contact.email}
-                </a>
-
-                {/* Response Time */}
-                <div className="flex items-center gap-2 text-xs text-slate-500">
-                  <Clock className="w-4 h-4" />
-                  <span>Response: {contact.responseTime}</span>
+                {/* Contact List */}
+                <div className="space-y-3">
+                  {contact.contacts.map((person, idx) => (
+                    <div key={idx} className="flex items-start gap-3 p-3 bg-slate-800/30 rounded-lg hover:bg-slate-800/50 transition-colors duration-200">
+                      <Phone className="w-4 h-4 mt-0.5 text-slate-400 flex-shrink-0" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-semibold text-white mb-1">{person.name}</p>
+                        <a
+                          href={`tel:${person.phone}`}
+                          className={`text-xs font-medium bg-gradient-to-r ${contact.color} bg-clip-text text-transparent hover:underline break-words`}
+                        >
+                          {person.phone}
+                        </a>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

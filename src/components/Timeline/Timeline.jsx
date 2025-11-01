@@ -13,59 +13,59 @@ export default function Timeline() {
     {
      
       title: "Start Registrations",
-      date: "1st June 2022",
+      date: "3rd Nov 2025",
       description: "",
       side: "left",
     },
     {
      
       title: "End Registrations",
-      date: "14th Jul 2022",
+      date: "10th Nov 2025",
       description: "",
       side: "right",
     },
     {
      
-      title: "Opening Ceremony",
-      date: "16th July 2022",
-      description: "Hackathon opening ceremony will start 9:15 AM onwards.",
+      title: "Pre-Round ",
+      date: "Before 1st Dec 2025",
+      description: "",
       side: "left",
     },
     {
      
       title: "Hackathon Starts",
-      date: "16th July 2022",
-      description: "Hackathon coding period will start from 10:30 AM onwards.",
+      date: "1st Dec 2025",
+      description: "Hackathon coding period will start from 10:00AM onwards.",
       side: "right",
     },
-    {
+    // {
       
-      title: "Session from GeeksforGeeks",
-      date: "16th July 2022",
-      description:
-        "Session on Complete Interview Preparation by GeeksForGeeks on 11:30 AM Onwards.",
-      side: "left",
-    },
-    {
+    //   title: "Session from GeeksforGeeks",
+    //   date: "16th July 2022",
+    //   description:
+    //     "Session on Complete Interview Preparation by GeeksForGeeks on 11:30 AM Onwards.",
+    //   side: "left",
+    // },
+    // {
       
-      title: "Session from Postman",
-      date: "16th July 2022",
-      description: "Session on APIs 101 using Postman on 4:00 PM Onwards.",
-      side: "right",
-    },
-    {
+    //   title: "Session from Postman",
+    //   date: "16th July 2022",
+    //   description: "Session on APIs 101 using Postman on 4:00 PM Onwards.",
+    //   side: "right",
+    // },
+    // {
       
-      title: "Session from Alan AI",
-      date: "16th July 2022",
-      description:
-        "Session on Building Voice AI Powered App in React JS with Alan AI on 06:30 PM Onwards.",
-      side: "left",
-    },
+    //   title: "Session from Alan AI",
+    //   date: "16th July 2022",
+    //   description:
+    //     "Session on Building Voice AI Powered App in React JS with Alan AI on 06:30 PM Onwards.",
+    //   side: "left",
+    // },
     {
      
       title: "Hackathon Ends",
-      date: "17th July 2022",
-      description: "Hackathon coding period will end on 10:30 PM.",
+      date: "2nd Dec 2025",
+      description: "Hackathon coding period will end on 10:00 AM.",
       side: "right",
     },
   ];

@@ -15,7 +15,16 @@ const GallerySection = () => {
   const totalOriginalItems = originalImages.length;
 
   const [activeIndex, setActiveIndex] = useState(totalOriginalItems);
+  const [isMobile, setIsMobile] = useState(false);
   const containerRef = useRef(null);
+
+  // Check if mobile
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Auto-slide interval
   useEffect(() => {
@@ -56,10 +65,10 @@ const GallerySection = () => {
   const getOriginalIndex = (index) => index % totalOriginalItems;
 
   return (
-    <section className="w-full mx-auto py-10 px-5 relative overflow-hidden bg-slate-950 min-h-screen">
+   <section className="w-full mx-auto px-2 relative overflow-hidden bg-slate-950 py-8 sm:py-12">
       <div className="container mx-auto overflow-hidden">
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-center text-white mb-2 uppercase tracking-wider">
-          A look back
+        <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white mb-2 uppercase tracking-wider">
+         The Journey So Far
         </h2>
         <p className="text-center text-indigo-300 mb-12 font-medium">
           Highlights{" "}
@@ -83,24 +92,27 @@ const GallerySection = () => {
               return (
                 <div
                   key={index}
-                  className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/2 px-2"
+                  className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/2 px-2 sm:px-3 md:px-4"
                   onClick={() => setActiveIndex(index)}
                 >
                   <div
-                    className={`relative w-full aspect-video transition-all duration-300 transform overflow-hidden cursor-pointer p-3 rounded-xl bg-slate-900 
+                    className={`relative w-full transition-all duration-300 transform cursor-pointer rounded-xl
                       ${
                         isHighlighted
-                          ? "scale-110 shadow-md shadow-slate-900/50 z-10 bg-indigo-50 px-10"
-                          : "scale-90 opacity-70 shadow-md"
+                          ? "scale-110 shadow-md shadow-slate-900/50 z-10 bg-gray-900"
+                          : "scale-90 opacity-70 shadow-md bg-gray-800"
                       }`}
+                    style={{ padding: isMobile ? '16px' : '20px' }}
                   >
-                    <img
-                      src={image.url}
-                      alt={image.alt}
-                      className={`w-full h-full object-cover rounded-xl ${
-                        isHighlighted ? "" : "border border-indigo-800"
-                      }`}
-                    />
+                    <div className="relative w-full aspect-video">
+                      <img
+                        src={image.url}
+                        alt={image.alt}
+                        className={`w-full h-full object-cover rounded-lg ${
+                          isHighlighted ? "border-2 border-gray-50" : ""
+                        }`}
+                      />
+                    </div>
                   </div>
                 </div>
               );

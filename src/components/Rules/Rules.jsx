@@ -26,7 +26,7 @@ const sections = [
       "Participants must be currently enrolled in MCA or BCA programs.",
       "Participation is strictly team-based only.",
       "Each team must consist of exactly 3 members.",
-      "A team can belong to only one stream (MCA or BCA).",
+      "Each team should represent only one stream either MCA or BCA.",
       "Participants must carry their college ID cards for verification.",
     ],
   },

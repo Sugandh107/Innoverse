@@ -44,6 +44,9 @@ const HomePage = ({ fonts, bgColor }) => (
   <>
     <HeroSection fonts={fonts} bgColor={bgColor} />
     <Suspense fallback={<LoadingSpinner />}>
+      <section id='prizes'>
+        <PrizesSection fonts={fonts} />
+      </section>
       <section id='about'>
         <AboutSection fonts={fonts} />
       </section>
@@ -51,9 +54,6 @@ const HomePage = ({ fonts, bgColor }) => (
       <Domains />
       <section id='timeline'>
         <Timeline fonts={fonts} />
-      </section>
-      <section id='prizes'>
-        <PrizesSection fonts={fonts} />
       </section>
       <section id='gallery'>
         <GallerySection />
@@ -67,9 +67,9 @@ const HomePage = ({ fonts, bgColor }) => (
       <section id='faq'>
         <FAQSection fonts={fonts} />
       </section>
-      <section id='contact'>
+      {/* <section id='contact'>
         <Contact />
-      </section>
+      </section> */}
     </Suspense>
   </>
 );
