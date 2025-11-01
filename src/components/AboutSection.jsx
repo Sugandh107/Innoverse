@@ -1,14 +1,18 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 
 const AboutSection = ({
   images = [
-    'https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80',
-    'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80',
-    'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80'
-  ]
+    "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=1200&q=80",
+    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1200&q=80",
+    "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80",
+  ],
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState({ themes: 0, hours: 0, participants: 0 });
+  const [counts, setCounts] = useState({
+    themes: 0,
+    hours: 0,
+    participants: 0,
+  });
   const [showImage, setShowImage] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const sectionRef = useRef(null);
@@ -64,9 +68,24 @@ const AboutSection = ({
   }, [showImage, images.length]);
 
   const stats = [
-    { value: counts.themes, label: 'Themes', color: 'text-cyan-400', delay: '0ms' },
-    { value: counts.hours, label: 'Hours of Hacking', color: 'text-pink-500', delay: '200ms' },
-    { value: counts.participants, label: 'Participants', color: 'text-orange-400', delay: '400ms' },
+    {
+      value: counts.themes,
+      label: "Themes",
+      color: "text-cyan-400",
+      delay: "0ms",
+    },
+    {
+      value: counts.hours,
+      label: "Hours of Hacking",
+      color: "text-pink-500",
+      delay: "200ms",
+    },
+    {
+      value: counts.participants,
+      label: "Participants",
+      color: "text-orange-400",
+      delay: "400ms",
+    },
   ];
 
   return (
@@ -75,15 +94,17 @@ const AboutSection = ({
       id="about"
       className="relative w-full bg-slate-950 overflow-hidden py-14 sm:py-16 md:py-20"
     >
-      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Title */}
         <div
           className={`text-center mb-10 sm:mb-14 transition-all duration-1000 ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
+            isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-10"
           }`}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
-            What is{' '}
+            What is{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
               Inoverse 2.0
             </span>
@@ -97,21 +118,23 @@ const AboutSection = ({
             <div
               key={stat.label}
               className={`text-center transform transition-all duration-1000 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: stat.delay }}
             >
               <div className="relative inline-block group">
                 <div
                   className={`absolute inset-0 ${stat.color.replace(
-                    'text-',
-                    'bg-'
+                    "text-",
+                    "bg-"
                   )} opacity-20 blur-3xl group-hover:opacity-30 transition-opacity duration-500 rounded-full scale-150`}
                 />
                 <h3
                   className={`relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black ${stat.color} mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {stat.label === 'Participants'
+                  {stat.label === "Participants"
                     ? `${stat.value.toLocaleString()}+`
                     : `${stat.value}+`}
                 </h3>
@@ -126,16 +149,16 @@ const AboutSection = ({
         {/* Image and Text Section */}
         <div
           className={`relative transition-all duration-1000 max-w-6xl mx-auto ${
-            showImage ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            showImage ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <div className="relative w-full h-[350px] sm:h-[450px] md:h-[500px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative w-full h-[450px] sm:h-[650px] md:h-[500px] lg:h-[550px] rounded-2xl overflow-hidden shadow-2xl">
             {/* Slideshow */}
             {images.map((image, index) => (
               <div
                 key={index}
                 className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
-                  index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                  index === currentImageIndex ? "opacity-100" : "opacity-0"
                 }`}
               >
                 <img
@@ -151,31 +174,71 @@ const AboutSection = ({
 
             {/* Text */}
             <div className="absolute inset-0 flex flex-col justify-center items-center px-3 sm:px-6 md:px-10">
-              <div className="max-w-4xl w-full space-y-3 sm:space-y-4 text-center text-white text-[0.8rem] sm:text-lg md:text-xl lg:text-2xl leading-relaxed">
+              <div className="max-w-4xl w-full space-y-3 sm:space-y-4 text-center text-white text-[0.8rem] sm:text-lg md:text-xl lg:text-2xl leading-relaxed sm-mb-8">
                 <p>
                   <span className="font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
                     INNOVERSE 2.0
-                  </span>{' '}
-                  is a national-level hackathon designed to ignite innovation and challenge brilliant minds in the domains of{' '}
-                  <span className="text-cyan-400 font-semibold">Artificial Intelligence</span>,{' '}
-                  <span className="text-pink-400 font-semibold">Machine Learning</span>,{' '}
-                  <span className="text-purple-400 font-semibold">Cybersecurity</span>, and{' '}
-                  <span className="text-orange-400 font-semibold">Blockchain</span>.
+                  </span>{" "}
+                  is a national-level hackathon designed to ignite innovation
+                  and challenge brilliant minds in the domains of{" "}
+                  <span className="text-cyan-400 font-semibold">
+                    Artificial Intelligence
+                  </span>
+                  ,{" "}
+                  <span className="text-pink-400 font-semibold">
+                    Machine Learning
+                  </span>
+                  ,{" "}
+                  <span className="text-purple-400 font-semibold">
+                    Cybersecurity
+                  </span>
+                  , and{" "}
+                  <span className="text-orange-400 font-semibold">
+                    Blockchain
+                  </span>
+                  .
                 </p>
 
                 <p>
-                  Organized by the{' '}
-                  <span className="font-bold text-cyan-300">Department of MCA, KLS Gogte Institute of Technology</span>, 
-                  this event unites creative thinkers and tech enthusiasts to craft impactful solutions within an intense{' '}
-                  <span className="font-semibold text-pink-400">24-hour coding marathon</span>.
+                  Organized by the{" "}
+                  <span className="font-bold text-cyan-300">
+                    Department of MCA, KLS Gogte Institute of Technology
+                  </span>
+                  , this event unites creative thinkers and tech enthusiasts to
+                  craft impactful solutions within an intense{" "}
+                  <span className="font-semibold text-pink-400">
+                    24-hour coding marathon
+                  </span>
+                  .
                 </p>
 
                 <p>
-                  With separate competitive tracks for MCA and BCA students,{' '}
-                  <span className="font-semibold text-purple-400">INNOVERSE 2.0</span> aims to inspire new ideas, build futuristic prototypes, and celebrate the spirit of technology and teamwork.
+                  With separate competitive tracks for MCA and BCA students,{" "}
+                  <span className="font-semibold text-purple-400">
+                    INNOVERSE 2.0
+                  </span>{" "}
+                  aims to inspire new ideas, build futuristic prototypes, and
+                  celebrate the spirit of technology and teamwork.
                 </p>
 
-                <p className="font-bold text-white/90">See you at the hackathon! 🚀💻</p>
+                <p className="font-bold text-white/90">
+                  See you at the hackathon! 🚀💻
+                </p>
+                  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 sm:mt-8">
+                    <a
+                      href="/rules"
+                      className="px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full border-2 border-purple-500 text-white bg-transparent hover:bg-purple-600 hover:border-cyan-400 transition-all duration-300 shadow-md hover:scale-105"
+                    >
+                      Rules
+                    </a>
+
+                    <a
+                      href="#contact" // or your registration link
+                      className="px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full bg-purple-600 text-white border-2 border-purple-500 hover:bg-cyan-500 hover:border-cyan-400 transition-all duration-300 shadow-lg hover:scale-105"
+                    >
+                      Register
+                    </a>
+                  </div>
               </div>
             </div>
           </div>
@@ -186,10 +249,13 @@ const AboutSection = ({
       <div className="absolute top-20 left-10 w-64 sm:w-72 h-64 sm:h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
       <div
         className="absolute bottom-20 right-10 w-80 sm:w-96 h-80 sm:h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse pointer-events-none"
-        style={{ animationDelay: '1s' }}
+        style={{ animationDelay: "1s" }}
       />
       <div className="absolute top-20 left-10 w-72 h-72 bg-cyan-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" />
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse pointer-events-none" style={{ animationDelay: '1s' }} />
+      <div
+        className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse pointer-events-none"
+        style={{ animationDelay: "1s" }}
+      />
     </section>
   );
 };

@@ -11,7 +11,7 @@ const FAQSection = ({
     {
       question: "Who can participate? 🌐",
       answer:
-        "Anyone passionate about technology, innovation, and problem-solving can participate! Whether you're a student, professional developer, designer, or enthusiast, DUHacks welcomes all skill levels.",
+        "Anyone passionate about technology, innovation, and problem-solving can participate! Whether you're a student, professional developer, designer, or enthusiast, Innoverse welcomes all skill levels.",
     },
     {
       question: "What if this is my first hackathon?",
@@ -28,11 +28,11 @@ const FAQSection = ({
       answer:
         "Offline participation is available for DDU and nearby college students. Remote participants can join online from anywhere!",
     },
-    {
-      question: "Will travel reimbursement be provided?",
-      answer:
-        "Travel reimbursement details vary. Please refer to the official guidelines or contact our team for updates.",
-    },
+    // {
+    //   question: "Will travel reimbursement be provided?",
+    //   answer:
+    //     "Travel reimbursement details vary. Please refer to the official guidelines or contact our team for updates.",
+    // },
     {
       question: "What should be the team size?",
       answer:
@@ -41,10 +41,10 @@ const FAQSection = ({
     {
       question: "Are cross-college teams allowed?",
       answer:
-        "Yes! DUHacks encourages cross-college collaboration — build a diverse team and bring your ideas to life!",
+        "Yes! Innoverse encourages cross-college collaboration — build a diverse team and bring your ideas to life!",
     },
     {
-      question: "What will I gain from DUHacks 4.0? 🏆",
+      question: "What will I gain from Innoverse 2.0? 🏆",
       answer:
         "Prizes, swag, certificates, networking opportunities, mentorship — and the thrill of building something incredible in 36 hours!",
     },
@@ -88,7 +88,7 @@ const FAQSection = ({
             className="text-lg text-slate-300 mt-3 max-w-2xl mx-auto leading-relaxed"
             style={{ fontFamily: fonts.body }}
           >
-            Everything you need to know about DUHacks 4.0 — from participation
+            Everything you need to know about Innoverse 4.0 — from participation
             to prizes, we’ve got you covered.
           </p>
         </div>
