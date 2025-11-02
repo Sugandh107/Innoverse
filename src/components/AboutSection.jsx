@@ -140,7 +140,9 @@ const AboutSection = ({
                 <h3
                   className={`relative text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black ${stat.color} mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {stat.label === "Participants"
+                  {stat.label === "Hours of Hacking"
+                    ? `${stat.value}`
+                    : stat.label === "Participants"
                     ? `${stat.value.toLocaleString()}+`
                     : `${stat.value}+`}
                 </h3>
