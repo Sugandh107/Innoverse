@@ -105,7 +105,13 @@ const AboutSection = ({
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white">
             What is{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
+            <span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
               INNOVERSE 2.0
             </span>
             ?
@@ -117,7 +123,7 @@ const AboutSection = ({
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className={`text-center transform transition-all duration-1000 ${
+              className={`text-center transform transition-all duration-100 ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -181,19 +187,19 @@ const AboutSection = ({
                   </span>{" "}
                   is a National-level hackathon designed to ignite innovation
                   and challenge brilliant minds in the domains of{" "}
-                  <span className="text-cyan-400 font-semibold">
+                  <span className="">
                     Artificial Intelligence
                   </span>
                   ,{" "}
-                  <span className="text-pink-400 font-semibold">
+                  <span className=" font-semibold">
                     Machine Learning
                   </span>
                   ,{" "}
-                  <span className="text-purple-400 font-semibold">
+                  <span className=" font-semibold">
                     Cybersecurity
                   </span>
                   , and{" "}
-                  <span className="text-orange-400 font-semibold">
+                  <span className="font-semibold">
                     Blockchain
                   </span>
                   .

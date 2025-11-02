@@ -8,28 +8,38 @@ const TeamSection = () => {
   const teamData = [
     {
       name: 'Sugandh Revankar',
-      role: 'Dev',
+      role: 'Developer',
       category: 'Dev',
-      image: '/assets/team/krish1.png',
+      image: './sugandh.jpg',
       color: '#507a87',
-      linkedin: 'https://www.linkedin.com/in/krish-desai-9b6a56259',
-      github: 'https://github.com/DesaiKrish'
+      linkedin: 'https://www.linkedin.com/in/sugandh-revankar-698968225/',
+      github: 'https://github.com/Sugandh107'
     },
     {
-      name: 'Ningaraj',
-      role: 'Dev',
+      name: 'Ningaraj Gani',
+      role: 'Developer',
       category: 'Dev',
-      image: '/assets/team/krish1.png',
+      image: '/ningaraj.jpg',
       color: '#507a87',
-      linkedin: 'https://www.linkedin.com/in/krish-desai-9b6a56259',
-      github: 'https://github.com/DesaiKrish'
+      linkedin: 'https://www.linkedin.com/in/ningaraj-gani-58432722a/',
+      github: ''
+    },
+    {
+      name: 'Vishnu Sangammanavar',
+      role: 'Developer',
+      category: 'Dev',
+      image: '/vishnu.jpg',
+      color: '#507a87',
+      linkedin: 'https://www.linkedin.com/in/vishnu-sangammanavar-11230021b',
+      github: ''
     },
     {
       name: 'Sriraj Yadav',
       role: 'Lead Organizer',
       category: 'Organizer',
-      image: '',
-      color: '#507a87'
+      image: 'sriraj.jpg',
+      color: '#507a87',
+      linkedin: 'https://www.linkedin.com/in/sriraj-yadav12/',
     },
     {
       name: 'Praveen',
@@ -37,7 +47,7 @@ const TeamSection = () => {
       category: 'Organizer',
       image: '/assets/team/kris2.png',
       color: '#8b4a4c',
-      linkedin: 'https://www.linkedin.com/in/kris-patel-985158250',
+      linkedin: '',
       github: 'https://github.com/Kris0011'
     },
     
@@ -55,7 +65,13 @@ const TeamSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white text-center mb-12 md:mb-16">
-          Meet the Team
+          Meet the <span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>Team</span>
         </h1>
 
         {/* Category Navigation */}

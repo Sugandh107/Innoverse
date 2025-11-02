@@ -23,7 +23,13 @@ const domains = [
 const Domains = () => {
   return (
     <section id="domains" className="domains-section">
-      <h2 className="domains-title">Domains</h2>
+      <h2 className="domains-title"> <span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>Domains</span></h2>
       <div className="domains-grid">
         {domains.map((domain, index) => (
           <div key={index} className="domain-card">

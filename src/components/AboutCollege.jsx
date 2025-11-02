@@ -20,7 +20,13 @@ const AboutCollege = ({ fonts }) => {
               textShadow: "0 0 20px rgba(139, 92, 246, 0.3)",
             }}
           >
-            MCA <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
+            MCA <span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
               DEPARTMENT
             </span>
           </h2>
@@ -81,12 +87,15 @@ const AboutCollege = ({ fonts }) => {
 
           {/* Read More Button */}
           <div className="flex justify-center mt-8">
-            <button
-              className="group relative px-8 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl font-bold text-gray-200 text-lg overflow-hidden transition-all duration-300 hover:bg-slate-700/60 hover:border-slate-500/50"
-              style={{ fontFamily: fonts.body }}
-            >
-              More
-            </button>
+            <a href="https://git.edu/departments/department-of-master-of-computer-application/"
+              target="_blank">
+              <button
+                className="group relative px-8 py-4 bg-slate-800/60 border border-slate-600/50 rounded-xl font-bold text-gray-200 text-lg overflow-hidden transition-all duration-300 hover:bg-slate-700/60 hover:border-slate-500/50"
+                style={{ fontFamily: fonts.body }}
+              >
+                More
+              </button>
+            </a>
           </div>
         </div>
 

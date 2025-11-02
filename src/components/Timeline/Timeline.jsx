@@ -155,14 +155,20 @@ export default function Timeline() {
     <div className="w-full˳ mx-auto py-20 px-5 relative overflow-hidden bg-slate-950 min-h-screen" ref={timelineRef} >
       <div className="text-center mb-16 relative">
         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-wide">
-          Event Timeline
+          Event <span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>Timeline</span>
         </h2>
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-3 w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full"></div>
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-3 w-24 h-1 bg-gradient-to-r from-purple-500 to-purple-700 rounded-full "></div>
       </div>
 
       <div 
         ref={dotsContainerRef}
-        className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2 w-1 z-0 flex flex-col justify-evenly items-center max-md:left-8"
+        className="absolute left-1/2 top-10 bottom-0 transform -translate-x-1/2 w-1 z-0 flex flex-col justify-evenly items-center max-md:left-8"
       >
         {dots.map((dot, index) => (
           <div

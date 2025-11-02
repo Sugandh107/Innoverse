@@ -68,7 +68,13 @@ const GallerySection = () => {
    <section className="w-full mx-auto px-2 relative overflow-hidden bg-slate-950 py-8 sm:py-12">
       <div className="container mx-auto overflow-hidden">
         <h2 className="text-3xl md:text-5xl font-extrabold text-center text-white mb-2 uppercase tracking-wider">
-         The Journey So Far
+         The Journey <span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>So Far</span>
         </h2>
         <p className="text-center text-indigo-300 mb-12 font-medium">
           Highlights{" "}

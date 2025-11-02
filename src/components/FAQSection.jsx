@@ -88,7 +88,7 @@ const FAQSection = ({
             className="text-lg text-slate-300 mt-3 max-w-2xl mx-auto leading-relaxed"
             style={{ fontFamily: fonts.body }}
           >
-            Everything you need to know about Innoverse 4.0 — from participation
+            Everything you need to know about Innoverse 2.0 — from participation
             to prizes, we’ve got you covered.
           </p>
         </div>
@@ -158,9 +158,7 @@ const FAQSection = ({
           >
             Still have questions? Reach out — we’re here to help.
           </p>
-          <button className="relative inline-flex items-center justify-center px-10 py-4 font-semibold text-white rounded-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 shadow-lg hover:shadow-cyan-500/30 hover:scale-105 transition-all duration-300">
-            Contact Us
-          </button>
+          
         </div>
       </div>
 

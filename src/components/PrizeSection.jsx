@@ -62,7 +62,13 @@ const PrizesSection = ({
 						className='text-4xl sm:text-5xl lg:text-6xl font-black text-white mb-4'
 						style={{ fontFamily: fonts.title }}>
 						Hackathon{" "}
-						<span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500'>
+						<span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
 							Prizes
 						</span>
 					</h2>

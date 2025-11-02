@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 // Eager load components that appear above the fold
 import HeroSection from './components/HeroSection';
 import ScrollToTop from './components/ScrollToTop.jsx';
+import Footer from './components/Footer.jsx';
 
 // Lazy load components below the fold
 const AboutSection = lazy(() => import('./components/AboutSection'));
@@ -104,6 +105,7 @@ function App() {
             />
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );

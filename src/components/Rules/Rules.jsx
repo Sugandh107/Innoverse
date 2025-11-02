@@ -227,7 +227,13 @@ const sections = [
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-4 text-white">
           <span>Hackathon Rules</span>
           {" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+          <span
+  className="bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 animate-gradient bg-clip-text text-transparent"
+  style={{
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+  }}
+>
             & Guidelines
           </span>
         </h2>
