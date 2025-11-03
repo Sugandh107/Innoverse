@@ -54,7 +54,9 @@ function Contact() {
       description: "For Faculty Related inquiries",
       contacts: [
         { name: "Sriraj Yadav", phone: "7760819024" },
-        { name: "Praveen ", phone: "6362237616" }
+        { name: "Praveen ", phone: "6362237616" },
+        { name: "Disha Birje ", phone: "9019879866" },
+        { name: "Akanksha More ", phone: "8867462120" }
       ],
       color: "from-purple-500 to-pink-500",
       bgGlow: "bg-purple-500/10",
