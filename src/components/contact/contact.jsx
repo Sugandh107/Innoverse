@@ -36,27 +36,14 @@ function Contact() {
   };
 
   const contactData = [
-    {
-      icon: <Mail className="w-8 h-8" />,
-      role: "Registration & Queries",
-        description: "For participant registrations, ticket issues, and general questions",
-      contacts: [
-        { name: "Disha Birje", phone: "9019879866" },
-        { name: "Sanchita Devgekar", phone: "7975089175" },
-        { name: "Savitri Koparde", phone: "7760485975" }
-      ],
-      color: "from-cyan-500 to-blue-500",
-      bgGlow: "bg-cyan-500/10",
-    },
+    
     {
       icon: <MessageCircle className="w-8 h-8" />,
-      role: "Organizers",
-      description: "For Faculty Related inquiries",
+      role: "Registration & Queries",
+      description: "",
       contacts: [
         { name: "Sriraj Yadav", phone: "7760819024" },
         { name: "Praveen ", phone: "6362237616" },
-        { name: "Disha Birje ", phone: "9019879866" },
-        { name: "Akanksha More ", phone: "8867462120" }
       ],
       color: "from-purple-500 to-pink-500",
       bgGlow: "bg-purple-500/10",
@@ -104,19 +91,19 @@ function Contact() {
         </div>
 
         {/* Contact Cards Grid */}
-        <div
-          className={`grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16 transition-all duration-1000 delay-200 ${
+       <div
+          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8 max-w-2xl mx-auto mb-16 px-4 transition-all duration-1000 delay-200 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
           {contactData.map((contact, index) => (
             <div
               key={index}
-              className="relative group"
+              className="relative group w-full"
             >
               {/* Glow effect */}
               <div
-                className={`absolute inset-0 ${contact.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                className={`absolute inset-0 mx ${contact.bgGlow} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
               />
 
               {/* Card */}
