@@ -21,7 +21,7 @@ const TeamSection = () => {
       image: '/ningaraj.jpg',
       color: '#507a87',
       linkedin: 'https://www.linkedin.com/in/ningaraj-gani-58432722a/',
-      github: ''
+      github: 'https://github.com/ningarajgani'
     },
     {
       name: 'Vishnu Sangammanavar',
@@ -30,7 +30,7 @@ const TeamSection = () => {
       image: '/vishnu.jpg',
       color: '#507a87',
       linkedin: 'https://www.linkedin.com/in/vishnu-sangammanavar-11230021b',
-      github: ''
+      github: 'https://github.com/VishnuSangammanavar'
     },
     {
       name: 'Sriraj Yadav',
@@ -44,10 +44,9 @@ const TeamSection = () => {
       name: 'Praveen',
       role: 'Lead Organizer',
       category: 'Organizer',
-      image: '/assets/team/kris2.png',
+      image: 'praveen.jpg',
       color: '#8b4a4c',
-      linkedin: '',
-      github: 'https://github.com/Kris0011'
+      linkedin: 'https://www.linkedin.com/in/praveen-bhusaraddi-426466296/'
     },
   ];
 
