@@ -26,7 +26,7 @@ const FAQSection = ({
     {
       question: "Who can participate offline?",
       answer:
-        "Offline participation is available for DDU and nearby college students. Remote participants can join online from anywhere!",
+        "Offline participation is available for DDU and nearby college students.",
     },
     // {
     //   question: "Will travel reimbursement be provided?",

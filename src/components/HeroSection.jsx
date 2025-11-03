@@ -166,7 +166,7 @@ const HeroSection = ({ fonts, bgColor }) => {
         >
           <h1 className="text-[3.2rem] sm:text-[2rem] md:text-[4rem] lg:text-[8rem] font-black text-white leading-none tracking-tight select-none flex flex-wrap justify-center gap-x-4">
             {titleParts.map((part, partIndex) => (
-              <span key={partIndex} className="inline-flex whitespace-nowrap">
+              <span key={partIndex} className="inline-flex sm:gap-3 gap-1 whitespace-nowrap">
                 {part.letters.map((letter, letterIndex) => {
                   const globalIndex = partIndex === 0 ? letterIndex : 9 + letterIndex;
                   return (
