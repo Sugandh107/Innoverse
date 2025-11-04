@@ -116,7 +116,7 @@ const HeroSection = ({ fonts, bgColor }) => {
 					<p
 						className='text-white text-[.8rem] md:text-xl lg:text-4xl font-semibold tracking-wide mb-2'
 						style={{ fontFamily: fonts.body }}>
-						city
+						Belagavi
 					</p>
 					<p
 						className='text-white text-[.8rem] md:text-xl lg:text-2xl font-semibold tracking-wide mb-2'
