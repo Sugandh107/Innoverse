@@ -44,7 +44,7 @@ const TeamSection = () => {
       name: 'Praveen',
       role: 'Lead Organizer',
       category: 'Organizer',
-      image: 'praveen.jpg',
+      image: 'praveen.png',
       color: '#8b4a4c',
       linkedin: 'https://www.linkedin.com/in/praveen-bhusaraddi-426466296/'
     },
