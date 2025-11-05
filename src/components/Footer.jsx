@@ -54,7 +54,7 @@ const Footer = () => {
 							rel='noopener noreferrer'
 							className='flex items-center'>
 							<img
-								src='/logo.png'
+								src='./3.png'
 								className='h-8 me-1 sm:me-3 rounded-md'
 								alt='KLS Logo'
 							/>
@@ -62,7 +62,7 @@ const Footer = () => {
 								KLS Gogte Institute of Technology
 							</span>
 							<img
-								src='3.png'
+								src='./logo.png'
 								className='h-8 ms-1 sm:ms-3 rounded-md'
 								alt='GIT Logo'
 							/>
