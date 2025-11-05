@@ -102,7 +102,7 @@ const HeroSection = ({ fonts, bgColor }) => {
 					}`}>
 					<div className='flex flex-wrap items-center justify-center lg:gap-3 gap-2 max-w-4xl mx-auto'>
 						<img
-							src='./logo.png'
+							src='./3.png'
 							alt=''
 							className='lg:w-16 w-8 flex-shrink-0'
 						/>
@@ -111,7 +111,7 @@ const HeroSection = ({ fonts, bgColor }) => {
 							style={{ fontFamily: fonts.body }}>
 							KLS Gogte Institute of Technology
 						</p>
-						<img src='./3.png' alt='' className='lg:w-16 w-8 flex-shrink-0' />
+						<img src='./logo.png' alt='' className='lg:w-16 w-8 flex-shrink-0' />
 					</div>
 					<p
 						className='text-white text-[.8rem] md:text-xl lg:text-4xl font-semibold tracking-wide mb-2'
