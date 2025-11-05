@@ -3,6 +3,9 @@ import { Menu, X } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
 import { Link, useLocation } from "react-router-dom";
 
+const BROCHURE_LINK = "/Innoverse2.0_Brochure.pdf";
+const NEW_NAV_ITEM = "BROCHURE";
+
 const Navbar = ({ navItems, fonts }) => {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const location = useLocation();
@@ -60,6 +63,21 @@ const Navbar = ({ navItems, fonts }) => {
 										</HashLink>
 									);
 								})}
+
+								{/* 🌟 NEW: Desktop Brochure Link */}
+                                <a
+                                    href={BROCHURE_LINK}
+                                    download // This attribute triggers the download
+                                    className='text-white font-bold text-sm xl:text-base tracking-wide hover:text-cyan-400 transition-all duration-300 relative group whitespace-nowrap'
+                                    style={{
+                                        animation: `fadeInDown 0.6s ease-out ${
+                                            (navItems.length + 1) * 0.08 // Ensure animation timing is unique
+                                        }s both`,
+                                        fontFamily: fonts.body,
+                                    }}>
+                                    {NEW_NAV_ITEM}
+                                    <span className='absolute -bottom-1 left-0 w-0 h-0.5 bg-cyan-400 group-hover:w-full transition-all duration-500'></span>
+                                </a>
 
 								{/* Rules Link - Separate Route */}
 								<Link
@@ -133,6 +151,21 @@ const Navbar = ({ navItems, fonts }) => {
 									</HashLink>
 								);
 							})}
+
+							{/* 🌟 NEW: Mobile Brochure Link */}
+                            <a
+                                href={BROCHURE_LINK}
+                                download
+                                className='block text-white font-bold text-lg sm:text-xl hover:text-cyan-400 transition-all duration-300 hover:translate-x-2'
+                                onClick={() => setIsMenuOpen(false)}
+                                style={{
+                                    animation: `fadeInLeft 0.4s ease-out ${
+                                        (navItems.length + 1) * 0.06
+                                    }s both`,
+                                    fontFamily: fonts.body,
+                                }}>
+                                {NEW_NAV_ITEM}
+                            </a>
 
 							{/* Rules Link in Mobile Menu */}
 							<Link
