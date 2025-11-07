@@ -242,7 +242,7 @@ const HeroSection = ({ fonts, bgColor }) => {
 					<a
 						href='https://forms.gle/3DMuKDWsbZR42Jwv7'
 						target='_blank'
-						className='px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full bg-purple-600 text-white border-2 border-purple-500 hover:bg-cyan-500 hover:border-cyan-400 transition-all duration-300 shadow-lg hover:scale-105'>
+						className='px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full bg-purple-600/10 text-white border-2 border-purple-500 hover:bg-purple-500/30 hover:border-cyan-400 transition-all duration-300 shadow-lg hover:scale-105'>
 						Register
 					</a>
 				</div>

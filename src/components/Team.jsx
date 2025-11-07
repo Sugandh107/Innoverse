@@ -50,12 +50,28 @@ const TeamSection = () => {
 			linkedin: "https://www.linkedin.com/in/sriraj-yadav12/",
 		},
 		{
-			name: "Praveen",
+			name: "Praveen B",
 			role: "Lead Organizer",
 			category: "Organizer",
 			image: "praveen.png",
 			color: "#8b4a4c",
 			linkedin: "https://www.linkedin.com/in/praveen-bhusaraddi-426466296/",
+		},
+		{
+			name: "Akanksha More",
+			role: "Lead Organizer",
+			category: "Organizer",
+			image: "Akansha.jpeg",
+			color: "#8b4a4c",
+			linkedin: "https://www.linkedin.com/in/akankshaamore",
+		},
+		{
+			name: "Disha Birje",
+			role: "Lead Organizer",
+			category: "Organizer",
+			image: "Disha.jpg",
+			color: "#8b4a4c",
+			linkedin: "https://www.linkedin.com/in/disha-birje-621b6330b/",
 		},
 	];
 

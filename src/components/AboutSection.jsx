@@ -224,7 +224,7 @@ const AboutSection = ({
 			<div className='flex flex-col sm:flex-row justify-center items-center gap-4 mt-6 sm:mt-8'>
 				<a
 					href='/rules'
-					className='px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full border-2 border-purple-500 text-white bg-transparent hover:bg-purple-600 hover:border-cyan-400 transition-all duration-300 shadow-md hover:scale-105'>
+					className='px-6 sm:px-8 py-3 sm:py-3.5 text-sm sm:text-base font-bold rounded-full border-2 border-purple-500 text-white bg-transparent hover:bg-purple-600/30 hover:border-cyan-400 transition-all duration-300 shadow-md hover:scale-105'>
 					Rules
 				</a>
 			</div>

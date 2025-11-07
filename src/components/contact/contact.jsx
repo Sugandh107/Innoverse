@@ -156,12 +156,12 @@ function Contact() {
         >
           <p className="text-slate-400 text-lg">
             Need immediate assistance?{" "}
-            <a
-              href="mailto:info@innoverse.com"
+            <p
+              
               className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500 font-semibold hover:underline"
             >
               Contact us directly
-            </a>
+            </p>
           </p>
         </div>
       </div>

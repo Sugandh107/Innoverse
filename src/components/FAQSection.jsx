@@ -26,7 +26,7 @@ const FAQSection = ({
     {
       question: "Who can participate offline?",
       answer:
-        "Offline participation is available for DDU and nearby college students.",
+        "Offline participation is available for Innoverse and nearby college students.",
     },
     // {
     //   question: "Will travel reimbursement be provided?",
