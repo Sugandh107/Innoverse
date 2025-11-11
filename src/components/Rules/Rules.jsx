@@ -40,8 +40,22 @@ const Rules = () => {
 			points: [
 				"Teams must register before the deadline announced by organizers.",
 				"A unique Team Name must be provided during registration.",
+				"Registration is a two-step process: Application followed by Competitive Selection.",
 				"Once registered, team member changes are not allowed.",
 				"All participants are required to report on time for the event start on 1st Dec at 9:00 AM.",
+			],
+		},
+		{
+			title: "Team Selection Process",
+			icon: Scale,
+			points: [
+				"Total Slots: A maximum of 10 teams from BCA and 10 teams from MCA will be selected to participate.",
+				"During the registration period, teams will be provided with dummy problem statements/scenarios relevant to the hackathon themes.",
+				"Teams must submit a link to a Minimum Viable Prototype (MVP) or Proof-of-Concept (PoC) demonstrating their solution to one of the provided problems.",
+				"Submissions must include a brief Video Demonstration (max 2 minutes) and a GitHub Repository link showing the codebase.",
+				"The organizing committee will evaluate submissions based on the prototype's functionality, technical complexity, and strategic approach.",
+				"Only the top 10 ranked teams from each stream (BCA/MCA) will be notified and invited to the main event.",
+				"The decision of the Selection Committee is final and binding.",
 			],
 		},
 		{
