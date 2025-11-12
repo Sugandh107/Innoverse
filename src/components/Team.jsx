@@ -114,7 +114,7 @@ const TeamSection = () => {
 				</nav>
 
 				{/* Team Grid with smooth transitions */}
-				<div className='grid grid-cols-2 gap-8 sm:gap-12 md:gap-16 lg:gap-20 place-items-center transition-all duration-300'>
+				<div className='flex flex-wrap justify-center gap-12 sm:gap-16 md:gap-20 lg:gap-24 transition-all duration-300'>
 					{filteredMembers.map((member, index) => (
 						<div
 							key={`${member.name}-${activeCategory}`}

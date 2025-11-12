@@ -2,13 +2,16 @@ import React, { useState, useEffect, useRef } from "react";
 
 const GallerySection = () => {
   const originalImages = [
-    { id: 1, url: "/gallery1.jpg", alt: "Man smiling in blue shirt" },
-    { id: 2, url: "/gallery2.jpg", alt: "Woman smiling with long hair" },
-    { id: 3, url: "/gallery3.jpg", alt: "Woman in white cardigan" },
-    { id: 4, url: "/gallery4.jpg", alt: "Man smiling in blue shirt" },
-    { id: 5, url: "/gallery5.jpg", alt: "Woman smiling with long hair" },
-    { id: 6, url: "/gallery6.jpg", alt: "Woman in white cardigan" },
-    { id: 7, url: "/gallery7.jpg", alt: "Woman in white cardigan" },
+    { id: 1, url: "./gallery1.jpg", alt: "GalleryImage1" },
+    { id: 2, url: "./gallery2.jpg", alt: "GalleryImage2" },
+    { id: 3, url: "./gallery3.jpg", alt: "GalleryImage3" },
+    { id: 4, url: "./gallery4.jpg", alt: "GalleryImage4" },
+    { id: 5, url: "./gallery5.jpg", alt: "GalleryImage5" },
+    { id: 6, url: "./gallery6.jpg", alt: "GalleryImage6" },
+    { id: 7, url: "./gallery7.jpg", alt: "GalleryImage7" },
+    { id: 8, url: "./gallery8.jpg", alt: "GalleryImage8" },
+    { id: 9, url: "./gallery9.jpg", alt: "GalleryImage9" },
+    { id: 10, url: "./gallery10.jpg", alt: "GalleryImage10" },
   ];
 
   const tripleGallery = [...originalImages, ...originalImages, ...originalImages];
