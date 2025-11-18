@@ -20,15 +20,29 @@ export default function Timeline() {
     {
      
       title: "End Registrations",
-      date: "10th Nov 2025",
+      date: "20th Nov 2025 6:00 PM",
       description: "",
       side: "right",
     },
     {
      
-      title: "Pre-Round ",
-      date: "Before 1st Dec 2025",
-      description: "",
+      title: "Round 0",
+      date: "20th Nov 2025 9:00 PM ",
+      description: "Problem statements will be released to Registered Teams Through Email.",
+      side: "left",
+    },
+    {
+     
+      title: "Deadline for Idea Submission",
+      date: "23th Nov 2025 11:50 PM",
+      description: "Before Deadline, Teams need to submit their ideas through Google Forms.",
+      side: "right",
+    },
+    {
+     
+      title: "Round 0 Evaluation Results",
+      date: "26th Nov 2025 6:30 PM",
+      description: " Top 10 Teams form MCA and BCA respectivily will be selected for the Innoverse 2.0 based on Idea Submission.",
       side: "left",
     },
     {
@@ -68,13 +82,13 @@ export default function Timeline() {
       description: "Hackathon coding period will end on 10:00 AM.",
       side: "left",
     },
-    {
+    // {
      
-      title: "Coming Soon",
-      date: "",
-      description: "Other details will be announced soon.",
-      side: "right",
-    },
+    //   title: "Coming Soon",
+    //   date: "",
+    //   description: "Other details will be announced soon.",
+    //   side: "right",
+    // },
   ];
 
   const dots = Array.from({ length: 50 }, (_, i) => i);
