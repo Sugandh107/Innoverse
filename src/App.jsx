@@ -20,6 +20,7 @@ const TeamSection = lazy(() => import("./components/Team.jsx"));
 const FAQSection = lazy(() => import("./components/FAQSection"));
 const PrizesSection = lazy(() => import("./components/PrizeSection.jsx"));
 const Contact = lazy(() => import("./components/contact/contact.jsx"));
+const RegistrationClosed = lazy(() => import("./components/RegistrationClosed.jsx"));
 
 const LoadingSpinner = () => (
 	<div className='flex items-center justify-center min-h-screen bg-slate-950'>
@@ -102,6 +103,7 @@ function App() {
 						/>
 
 						<Route path='/rules' element={<RulesPage fonts={FONTS} />} />
+						<Route path='/regclosed' element={<RegistrationClosed fonts={FONTS} />} />
 					</Routes>
 				</main>
 				<Footer />

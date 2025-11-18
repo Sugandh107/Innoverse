@@ -50,7 +50,7 @@ const Rules = () => {
 			icon: Scale,
 			points: [
 				"Total Slots: A maximum of 10 teams from BCA and 10 teams from MCA will be selected to participate.",
-				"Further Details will be updated soon.",
+				"No Refund Will be Provided.",
 				// "During the registration period, teams will be provided with dummy problem statements/scenarios relevant to the hackathon themes.",
 				// "Teams must submit a link to a Minimum Viable Prototype (MVP) or Proof-of-Concept (PoC) demonstrating their solution to one of the provided problems.",
 				// "Submissions must include a brief Video Demonstration (max 2 minutes) and a GitHub Repository link showing the codebase.",
