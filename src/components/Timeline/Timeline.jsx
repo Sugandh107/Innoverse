@@ -34,7 +34,7 @@ export default function Timeline() {
     {
      
       title: "Deadline for Idea Submission",
-      date: "23th Nov 2025 11:50 PM",
+      date: "24th Nov 2025 11:50 PM",
       description: "Before Deadline, Teams need to submit their ideas through Google Forms.",
       side: "right",
     },
